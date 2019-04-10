@@ -8,23 +8,21 @@
 
 import UIKit
 
-typealias typeal = EKContextMenuBuilder
-
-
-
-protocol EKContextMenuBuilderProtocol {
-    static func buildGesture()-> EKContextMenuGesture
-}
-
-
+typealias EKContextMenu = EKContextMenuBuilder
 
 struct EKContextMenuBuilder {
     var appearance:EKContextMenuAppearance?
+    var items:[EKContextMenuItem]
+    
+//    public init(items: [EKContextMenuItem]) {
+//        self.items = items
+//    }
+//   
+   
 }
 
-
-extension EKContextMenuBuilder:EKContextMenuBuilderProtocol {
-   static func buildGesture() -> EKContextMenuGesture {
-        return EKContextMenuGesture(appearance:EKContextMenuAppearance())
+extension EKContextMenuBuilder{
+    func buildGesture() -> EKContextMenuGesture {
+        return EKContextMenuGesture(appearance:appearance)
     }
 }

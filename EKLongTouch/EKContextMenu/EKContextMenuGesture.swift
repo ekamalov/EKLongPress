@@ -9,16 +9,13 @@
 import UIKit
 import EKKit
 
-typealias EKContextMenu = EKContextMenuGesture
-
-
 class EKContextMenuGesture: UILongPressGestureRecognizer {
     
-    private(set) var appearance: EKContextMenuAppearance!
+    private(set) var appearance: EKContextMenuAppearance?
     private(set) var window: UIWindow!
     private(set) var contextView:EKContextMenuView!
     
-    public init(appearance:EKContextMenuAppearance) {
+    public init(appearance:EKContextMenuAppearance?) {
         super.init(target: nil, action:nil)
         guard let window = UIApplication.shared.keyWindow else {
             assertionFailure("Can't access to UIApplication Window")
@@ -62,7 +59,7 @@ extension EKContextMenuGesture {
     func showMenu(on location:CGPoint){
         guard let view = getHighlightedSnapshot() else { return }
         contextView = EKContextMenuView(view)
-        
+        contextView.set(view: appearance!)
         EKTransition.transit(_with: self.window, 0.2, animations: {
             self.window.addSubview(self.contextView)
         }, options: [.transitionCrossDissolve])

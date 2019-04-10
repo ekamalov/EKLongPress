@@ -48,12 +48,13 @@ protocol EKContextMenuMethods {
 
 open class EKContextMenuView: UIView, EKContextMenuMethods {
     
-    public init(_ highlightedView:UIView)  {
+    public init(_ highlightedView:UIView, appearance:EKContextMenuAppearance? )  {
         super.init(frame: UIScreen.main.bounds)
         self.addSubview(highlightedView)
         
+        
         let defaultAppearance = EKContextMenuAppearance()
-        set(view: defaultAppearance)
+        set(view: appearance != nil ? appearance! : defaultAppearance)
     }
     
     required public init?(coder aDecoder: NSCoder) {

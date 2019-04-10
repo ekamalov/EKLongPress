@@ -40,7 +40,8 @@ class ViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     
         let bt = UIButton()
-       
+        
+
         
     }
     override func viewDidLayoutSubviews() {
@@ -68,7 +69,12 @@ class CVCell: UICollectionViewCell {
     static let identifier = "CVCell"
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addGestureRecognizer(typeal.buildGesture())
+        let cons = EKContextMenu(appearance: .init({ (value) in
+            value.backgroundAlpha = 0.3
+            value.backgroundColor = .red
+        }), items: [])
+        
+        addGestureRecognizer(cons.buildGesture())
     }
     
     required init?(coder aDecoder: NSCoder) {
