@@ -48,12 +48,12 @@ protocol EKContextMenuMethods {
 
 open class EKContextMenuView: UIView, EKContextMenuMethods {
     
-    public init(_ highlightedView:UIView, appearance:EKContextMenuAppearance? )  {
+    public init(_ highlightedView:UIView, appearance:EKContextMenuViewAppearance? )  {
         super.init(frame: UIScreen.main.bounds)
         self.addSubview(highlightedView)
         
         
-        let defaultAppearance = EKContextMenuAppearance()
+        let defaultAppearance = EKContextMenuViewAppearance()
         set(view: appearance != nil ? appearance! : defaultAppearance)
     }
     
@@ -61,7 +61,7 @@ open class EKContextMenuView: UIView, EKContextMenuMethods {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func set(view appearance:EKContextMenuAppearance){
+    public func set(view appearance:EKContextMenuViewAppearance){
         self.backgroundColor = appearance.backgroundColor
         self.alpha = appearance.backgroundAlpha
     }

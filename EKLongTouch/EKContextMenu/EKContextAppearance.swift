@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import EKBuilder
 
-public struct EKContextMenuAppearance {
+
+
+public struct EKContextMenuViewAppearance:EKBuilder {
+    public init() {}
+    
     /// The Background's alpha of the view. // defaul value 0.9
     var backgroundAlpha: CGFloat = 0.9
     
@@ -16,7 +21,7 @@ public struct EKContextMenuAppearance {
     var backgroundColor: UIColor = .black
     
     /// The colour of the touch location view
-    var touchPointColor: UIColor!
+    var touchPointColor: UIColor! = .red
     
     public init(backgroundAlpha: CGFloat = 0.9,
                 backgroundColor: UIColor = .black,
@@ -26,9 +31,16 @@ public struct EKContextMenuAppearance {
         self.touchPointColor = touchPointColor
     }
     
+}
+
+
+public struct  EKContextMenuItemAppearance: EKBuilder {
+    public init() {}
+    /// The items' icons default colour
+    var iconsDefaultColor:UIColor?
     
-    public init(_ build: (inout EKContextMenuAppearance) -> Void) {
-        build(&self)
-    }
+    /// The items' icons active colour
+    var iconsActiveColor:UIColor?
+    
     
 }

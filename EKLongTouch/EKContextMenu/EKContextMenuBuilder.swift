@@ -11,14 +11,13 @@ import UIKit
 typealias EKContextMenu = EKContextMenuBuilder
 
 struct EKContextMenuBuilder {
-    var appearance:EKContextMenuAppearance?
+    var appearance:EKContextMenuViewAppearance?
     var items:[EKContextMenuItem]
     
-//    public init(items: [EKContextMenuItem]) {
-//        self.items = items
-//    }
-//   
-   
+    public init(items: [EKContextMenuItem], appearance: EKContextMenuViewAppearance) {
+        self.items = items
+        self.appearance = appearance
+    } 
 }
 
 extension EKContextMenuBuilder{

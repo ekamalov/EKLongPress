@@ -22,6 +22,7 @@
 		45D7B98C224DE10700E0C6B0 /* EKContextMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */; };
 		45FF3C95225CA584007C4F5F /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3C94225CA584007C4F5F /* Cartfile */; };
 		45FF3C9A225CC4A9007C4F5F /* EKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FF3C99225CC4A9007C4F5F /* EKKit.framework */; };
+		45FF3D1A2260AAA3007C4F5F /* EKBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FF3D192260AAA3007C4F5F /* EKBuilder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuItem.swift; sourceTree = "<group>"; };
 		45FF3C94225CA584007C4F5F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		45FF3C99225CC4A9007C4F5F /* EKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKKit.framework; path = Carthage/Build/iOS/EKKit.framework; sourceTree = "<group>"; };
+		45FF3D192260AAA3007C4F5F /* EKBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKBuilder.framework; path = Carthage/Build/iOS/EKBuilder.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FF3D1A2260AAA3007C4F5F /* EKBuilder.framework in Frameworks */,
 				45FF3C9A225CC4A9007C4F5F /* EKKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,11 +152,11 @@
 		45D7B988224DDDC800E0C6B0 /* EKContextMenu */ = {
 			isa = PBXGroup;
 			children = (
+				45774E0F225776650040062E /* EKContextAppearance.swift */,
 				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
 				45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */,
 				45774E0B225711FA0040062E /* EKContextMenuGesture.swift */,
 				45774E0D225745100040062E /* EKContextMenuBuilder.swift */,
-				45774E0F225776650040062E /* EKContextAppearance.swift */,
 			);
 			path = EKContextMenu;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 		45FF3C8A225CA200007C4F5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45FF3D192260AAA3007C4F5F /* EKBuilder.framework */,
 				45FF3C99225CC4A9007C4F5F /* EKKit.framework */,
 			);
 			name = Frameworks;
@@ -304,12 +308,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/EKKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EKBuilder.framework",
 			);
 			name = "Carthage script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EKKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EKBuilder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
