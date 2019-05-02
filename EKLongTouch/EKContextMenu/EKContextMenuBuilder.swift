@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias EKContextMenu = EKContextMenuBuilder
+public typealias EKContextMenu = EKContextMenuBuilder
 
-struct EKContextMenuBuilder {
+public struct EKContextMenuBuilder {
     var appearance:EKContextMenuViewAppearance?
     var items:[EKContextMenuItem]
     
@@ -22,6 +22,6 @@ struct EKContextMenuBuilder {
 
 extension EKContextMenuBuilder{
     func buildGesture() -> EKContextMenuGesture {
-        return EKContextMenuGesture(appearance:appearance)
+        return EKContextMenuGesture(builder:self)
     }
 }

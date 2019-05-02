@@ -8,6 +8,7 @@
 
 import UIKit
 import EKKit
+import EKLayout
 
 var mainScreenWidth = UIScreen.main.bounds.width
 
@@ -39,14 +40,14 @@ class ViewController: UIViewController {
         self.view.addSubview(collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
-        let bt = UIButton()
-        
-        
-        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectionView.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height/3)
+//        collectionView.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height/3)
+        
+        collectionView.layout {
+            $0.left.right.margin(0).top(50).height(250)
+        }
     }
     
     

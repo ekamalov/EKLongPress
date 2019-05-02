@@ -11,11 +11,11 @@ import EKKit
 
 class EKContextMenuGesture: UILongPressGestureRecognizer {
     
-    private(set) var appearance: EKContextMenuViewAppearance?
+    private(set) var builder: EKContextMenu!
     private(set) var window: UIWindow!
     private(set) var contextView:EKContextMenuView!
     
-    public init(appearance:EKContextMenuViewAppearance?) {
+    public init(builder:EKContextMenu) {
         super.init(target: nil, action:nil)
         guard let window = UIApplication.shared.keyWindow else {
             assertionFailure("Can't access to UIApplication Window")
@@ -23,13 +23,13 @@ class EKContextMenuGesture: UILongPressGestureRecognizer {
         }
         
         self.window = window
-        self.appearance = appearance
+        self.builder = builder
         addTarget(self, action:  #selector(touchAction))
     }
     
     @objc private func touchAction(){
         let location = self.location(in: window)
-        print(location)
+//        print(location)
         switch self.state {
         case .began: longPressBegan(on: location)
         case .changed: break
@@ -58,7 +58,7 @@ extension EKContextMenuGesture {
     /// Creates the JonContextMenu view and adds to the Window
     func showMenu(on location:CGPoint){
         guard let view = getHighlightedSnapshot() else { return }
-        contextView = EKContextMenuView(view, appearance: appearance)
+        contextView = EKContextMenuView(view, builder: builder)
         
         EKTransition.transit(_with: self.window, 0.2, animations: {
             self.window.addSubview(self.contextView)

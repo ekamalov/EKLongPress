@@ -7,8 +7,11 @@
 //
 
 import UIKit
+protocol EKContextMenuItemProtocol {
+    
+}
 
-
-open class EKContextMenuItem: UIButton {
+open class EKContextMenuItem: UIView {
+    
     
 }
