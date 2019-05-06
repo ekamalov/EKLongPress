@@ -20,6 +20,7 @@ public struct EKApperance {
     }
 }
 
+
 public struct EKTouchPointApperance:EKBuilder {
     public init() {}
     
@@ -47,13 +48,17 @@ public struct EKContextAppearance:EKBuilder {
 
 public struct EKContextMenuItemAppearance: EKBuilder {
     public init() {}
-    /// The items' icons default colour
+    /// The items' icons default color
     var iconsDefaultColor:UIColor?
     
-    /// The items' icons active colour
+    /// The items' icons active color
     var iconsActiveColor:UIColor?
     
+    /// The size of the item view // default 35
+    var size: CGSize = .init(width: 35, height: 35)
     
+    /// The background's colour of the view // defaul black
+    var backgroundColor: UIColor = .black
 }
 
 
