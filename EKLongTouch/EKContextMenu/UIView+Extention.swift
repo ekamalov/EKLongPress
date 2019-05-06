@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let screen = UIScreen.main.bounds
 
 extension UIView {
     var circlerBorder: Bool {

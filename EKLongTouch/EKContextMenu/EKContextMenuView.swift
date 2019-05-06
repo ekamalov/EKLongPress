@@ -8,66 +8,77 @@
 
 import UIKit
 
-
-// MARK: Protocol
-
-/**
- *  EKContextMenuDelegate
- */
-@objc public protocol EKContextMenuDelegate {
+class EKContextMenuView: UIView{
+    private var distanceToTouchPointView: CGFloat = 20
     
-    /**
-     Tells the delegate the circle menu is about to draw a button for a particular index.
-     
-     - parameter button:     A circle menu button object that circle menu is going to use when drawing the row. Don't change button.tag
-     - parameter atIndex:    An button index.
-     */
-    @objc optional func circleMenu(willDisplay circleButton: EKContextMenuItem, atIndex: Int)
+    var properties: EKContextMenu!
     
-    /**
-     Tells the delegate that a specified index is about to be selected.
-     
-     - parameter button:     A selected circle menu button. Don't change button.tag
-     - parameter atIndex:    Selected button index
-     */
-    @objc optional func circleMenu(buttonWillSelected circleButton: EKContextMenuItem, atIndex: Int)
+    /// The view that represents the users's touch point
+    var touchPointView:UIView!
     
-    /**
-     Tells the delegate that the specified index is now selected.
-     
-     - parameter button:     A selected circle menu button. Don't change button.tag
-     - parameter atIndex:    Selected button index
-     */
-    @objc optional func circleMenu(buttonDidSelected circleButton: EKContextMenuItem, atIndex: Int)
+    private enum Direction {
+        case left,right,middle,up,down
+    }
     
-}
-
-protocol EKContextMenuMethods {
-    func configureViews()
-}
-
-class EKContextMenuView: UIView, EKContextMenuMethods {
-    var builder: EKContextMenu!
-    public init(_ highlightedView:UIView, builder:EKContextMenu)  {
+    public init(touchPoint point:CGPoint ,highlightedView view:UIView, properties:EKContextMenu) {
         super.init(frame: UIScreen.main.bounds)
-        self.addSubview(highlightedView)
-        self.builder = builder
         
-        self.set(view: builder.appearance!)
+        self.properties = properties
+        self.touchPointView = drawTouchPointView(center: point)
+        
+        self.addSubviews(view,touchPointView)
+        self.setAppearance()
+        self.showItems()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func set(view appearance:EKContextMenuViewAppearance){
-        self.backgroundColor = appearance.backgroundColor
-        self.alpha = appearance.backgroundAlpha
+    public func setAppearance(){
+        self.backgroundColor = properties.appearance.contextMenu.backgroundColor
+        self.alpha = properties.appearance.contextMenu.backgroundAlpha
     }
     
-    func configureViews() {
+    public func showItems(){
+        print(calculateDirections())
         
+        properties.items.forEach {
+            self.addSubview($0)
+        }
     }
     
+    func drawTouchPointView(center point:CGPoint) -> UIView {
+        return UIView.build{
+            $0.frame.size = properties.appearance.touchPoint.size
+            $0.center = point
+            $0.backgroundColor = .clear
+            $0.layer.borderColor = properties.appearance.touchPoint.borderColor.cgColor
+            $0.borderWidth = properties.appearance.touchPoint.borderWidth
+            $0.circlerBorder = true
+        }
+    }
     
 }
+
+// MARK: - private methods
+extension EKContextMenuView {
+    private func calculateDirections() -> (vertical:Direction, horizontal:Direction) {
+        var direction:(vertical:Direction, horizontal:Direction) =  (vertical: .middle, horizontal: .middle)
+        
+        let size:CGFloat = (distanceToTouchPointView + touchPointView.frame.width) + (properties.items.first?.appearance.size.width ?? 30)
+        let touchPoint = touchPointView.frame.origin
+        
+        if touchPoint.y + size > UIScreen.main.bounds.height {
+            direction.vertical = .up
+        }else if touchPoint.x + size > UIScreen.main.bounds.width {
+            direction.horizontal = .left
+        }else if touchPoint.y - size < 0 {
+            direction.vertical = .down
+        }else if touchPoint.x - size < 0{
+            direction.horizontal = .right
+        }
+        return direction
+    }
+}
+
