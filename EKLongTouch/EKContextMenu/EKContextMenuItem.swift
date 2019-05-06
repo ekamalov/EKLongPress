@@ -7,11 +7,29 @@
 //
 
 import UIKit
-protocol EKContextMenuItemProtocol {
-    
-}
 
-open class EKContextMenuItem: UIView {
+
+open class EKContextMenuItem: UIButton {
+    var appearance:EKContextMenuItemAppearance
+   
     
+    init() {
+        self.appearance = EKContextMenuItemAppearance()
+        super.init(frame: .init(origin: .zero, size: appearance.size))
+        setAppearance()
+    }
     
+    init(appearance:EKContextMenuItemAppearance) {
+        self.appearance = appearance
+        super.init(frame: .init(origin: .zero, size: appearance.size))
+        setAppearance()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setAppearance(){
+        self.backgroundColor = appearance.backgroundColor
+    }
 }
