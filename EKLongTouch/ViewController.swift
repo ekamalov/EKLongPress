@@ -12,12 +12,19 @@ import EKLayout
 
 var mainScreenWidth = UIScreen.main.bounds.width
 
+protocol test {
+    var bordorColor:UIColor { get }
+}
+
 class ViewController: UIViewController {
     
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var text: UITextField!
     @IBAction func change(_ sender: Any) {
         self.text.isSecureTextEntry = !self.text.isSecureTextEntry
     }
+    
+    
     
     
     lazy var collectionView: UICollectionView = {
@@ -40,16 +47,18 @@ class ViewController: UIViewController {
         self.view.addSubview(collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        collectionView.frame = CGRect(x: 0, y: 50, width: view.frame.width, height: view.frame.height/3)
         
         collectionView.layout {
             $0.left.right.margin(0).top(50).height(250)
         }
+      
+       
     }
     
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
     
 }
 
@@ -70,17 +79,18 @@ class CVCell: UICollectionViewCell {
     static let identifier = "CVCell"
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let cons = EKContextMenu(items: [], appearance: .build {
-                $0.backgroundColor = .blue
-                $0.backgroundAlpha = 0.3
-            })
+        
+        let cons =  EKContextMenu(items: [.init(), .init()], appearance: .init(touchPointApperance: .build{
+            $0.borderColor = .black
+            $0.size = .init(width: 35, height: 35)
+            }))
         
         //        let a:EKContextMenuItemAppearance = .build(block: {
         //            $0.iconsActiveColor = .red
         //        })
         
-       
-    
+        
+        
         let s = UIView()
         s.backgroundColor = .red
         s.clipsToBounds = true

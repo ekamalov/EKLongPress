@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4515FE16227AE1C30060B4CB /* EKLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4515FE15227AE1C30060B4CB /* EKLayout.framework */; };
+		4515FE19227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
+		4515FE1A227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
+		4515FE1B227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
 		4527E1AC2259D42F002A7D07 /* SPCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527E1AB2259D42F002A7D07 /* SPCollectionViewLayout.swift */; };
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
@@ -45,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4515FE15227AE1C30060B4CB /* EKLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKLayout.framework; path = Carthage/Build/iOS/EKLayout.framework; sourceTree = "<group>"; };
+		4515FE18227C188A0060B4CB /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		4527E1AB2259D42F002A7D07 /* SPCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayout.swift; sourceTree = "<group>"; };
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
@@ -156,10 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				45774E0F225776650040062E /* EKContextAppearance.swift */,
-				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
 				45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */,
+				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
 				45774E0B225711FA0040062E /* EKContextMenuGesture.swift */,
 				45774E0D225745100040062E /* EKContextMenuBuilder.swift */,
+				4515FE18227C188A0060B4CB /* UIView+Extention.swift */,
 			);
 			path = EKContextMenu;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */,
 				45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */,
 				45D7B98C224DE10700E0C6B0 /* EKContextMenuItem.swift in Sources */,
+				4515FE19227C188A0060B4CB /* UIView+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ABAABC224CD97700A21AB4 /* EKLongTouchTests.swift in Sources */,
+				4515FE1A227C188A0060B4CB /* UIView+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ABAAC7224CD97700A21AB4 /* EKLongTouchUITests.swift in Sources */,
+				4515FE1B227C188A0060B4CB /* UIView+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
