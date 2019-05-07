@@ -55,7 +55,7 @@ extension EKContextMenuGesture {
     /// Creates the JonContextMenu view and adds to the Window
     func showMenu(on location:CGPoint){
         guard let view = getHighlightedSnapshot() else { return }
-        contextView = EKContextMenuView(touchPoint: location,highlightedView: view, properties: properties)
+        contextView = EKContextMenuView(touchPoint: location,highlighted: view, properties: properties)
         
         EKTransition.transit(_with: self.window, 0.3, animations: {
             self.window.addSubview(self.contextView)
@@ -63,9 +63,10 @@ extension EKContextMenuGesture {
     }
     /// Removes the JonContextMenu view from the Window
     func dismissMenu(){
-        EKTransition.transit(_with: self.window, 0.3, animations: {
+        EKTransition.transit(_with: self.window, 0.2, animations: {
              self.contextView.removeFromSuperview()
         }, options: [.transitionCrossDissolve])
+        self.contextView = nil
     }
     
     /// Gets a snapshot of the touched highlighted view
