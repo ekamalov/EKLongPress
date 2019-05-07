@@ -11,7 +11,7 @@ import UIKit
 
 open class EKContextMenuItem: UIButton {
     var appearance:EKContextMenuItemAppearance
-   
+    var angle: CGFloat = 0
     
     init() {
         self.appearance = EKContextMenuItemAppearance()
