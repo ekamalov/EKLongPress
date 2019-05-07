@@ -9,49 +9,59 @@
 import UIKit
 
 class EKContextMenuView: UIView{
-    private var distanceToTouchPointView: CGFloat = 20
+    private var distanceToTouchPointView: CGFloat = 30
+    private var itemDistance:(x:CGFloat, y:CGFloat) = (x:1, y:1)
     
-    var properties: EKContextMenu!
+    private var properties: EKContextMenu!
     
     /// The view that represents the users's touch point
-    var touchPointView:UIView!
+    private var touchPointView:UIView!
+    /// The coordinates the the user touched on the screen
+    private var touchPoint:CGPoint = .zero
     
     private enum Direction {
         case left,right,middle,up,down
     }
     
-    public init(touchPoint point:CGPoint ,highlightedView view:UIView, properties:EKContextMenu) {
+    public init(touchPoint point:CGPoint ,highlighted view:UIView, properties:EKContextMenu) {
         super.init(frame: UIScreen.main.bounds)
-        
+        self.touchPoint = point
         self.properties = properties
-        self.touchPointView = drawTouchPointView(center: point)
-        
-        self.addSubviews(view,touchPointView)
-        self.setAppearance()
+        self.configureViews(highlighted: view)
         self.showItems()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required public init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-    public func setAppearance(){
-        self.backgroundColor = properties.appearance.contextMenu.backgroundColor
-        self.alpha = properties.appearance.contextMenu.backgroundAlpha
+    public func configureViews(highlighted view:UIView){
+        let backgroundView:UIView = .build {
+            $0.frame = self.frame
+            $0.backgroundColor = properties.appearance.contextMenu.backgroundColor
+            $0.alpha = properties.appearance.contextMenu.backgroundAlpha
+        }
+        self.touchPointView = drawTouchPointView()
+        self.addSubviews(backgroundView,view,touchPointView)
     }
     
     public func showItems(){
-        print(calculateDirections())
+        calculateDistanceToItem()
+        anglesForDirection()
         
-        properties.items.forEach {
-            self.addSubview($0)
+        properties.items.forEach { item in
+            item.center = touchPoint
+            self.addSubview(item)
+            UIView.animate(withDuration: item.appearance.duration, delay: item.appearance.delay,
+                           usingSpringWithDamping: item.appearance.dampingRatio, initialSpringVelocity: 1,
+                           options: [], animations: {
+                item.center = self.calculatePointCoordiantes(item.angle)
+            }, completion: nil)
         }
     }
     
-    func drawTouchPointView(center point:CGPoint) -> UIView {
+    func drawTouchPointView() -> UIView {
         return UIView.build{
             $0.frame.size = properties.appearance.touchPoint.size
-            $0.center = point
+            $0.center = self.touchPoint
             $0.backgroundColor = .clear
             $0.layer.borderColor = properties.appearance.touchPoint.borderColor.cgColor
             $0.borderWidth = properties.appearance.touchPoint.borderWidth
