@@ -15,13 +15,13 @@ open class EKContextMenuItem: UIButton {
     
     init() {
         self.appearance = EKContextMenuItemAppearance()
-        super.init(frame: .init(origin: .zero, size: appearance.size))
+        super.init(frame: .init(origin: .zero, size: .init(width: appearance.size, height: appearance.size)))
         setAppearance()
     }
     
     init(appearance:EKContextMenuItemAppearance) {
         self.appearance = appearance
-        super.init(frame: .init(origin: .zero, size: appearance.size))
+        super.init(frame: .init(origin: .zero, size: .init(width: appearance.size, height: appearance.size)))
         setAppearance()
     }
     
@@ -31,5 +31,6 @@ open class EKContextMenuItem: UIButton {
     
     public func setAppearance(){
         self.backgroundColor = appearance.backgroundColor
+        self.layer.cornerRadius = frame.size.width / 2
     }
 }
