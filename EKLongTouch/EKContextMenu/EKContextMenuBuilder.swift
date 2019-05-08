@@ -11,10 +11,10 @@ import UIKit
 public typealias EKContextMenu = EKContextMenuBuilder
 
 public struct EKContextMenuBuilder {
-    var appearance:EKApperance
+    var appearance:EKAppearance
     var items:[EKContextMenuItem]
     
-    public init(items: [EKContextMenuItem], appearance: EKApperance = EKApperance()) {
+    public init(items: [EKContextMenuItem], appearance: EKAppearance = EKAppearance()) {
         self.items = items
         self.appearance = appearance
     } 
@@ -22,7 +22,7 @@ public struct EKContextMenuBuilder {
 
 extension EKContextMenuBuilder{
     func buildGesture() -> EKContextMenuGesture {
-        precondition(items.count > 1, "items is empty")
+        precondition(items.count > 0, "items is empty")
         return EKContextMenuGesture(builder:self)
     }
 }
