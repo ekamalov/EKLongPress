@@ -9,11 +9,11 @@
 import UIKit
 import EKBuilder
 
-public struct EKApperance {
-    var touchPoint:EKTouchPointApperance
+public struct EKAppearance {
+    var touchPoint:EKTouchPointAppearance
     var contextMenu:EKContextAppearance
     
-    public init(touchPointApperance: EKTouchPointApperance = EKTouchPointApperance(),
+    public init(touchPointApperance: EKTouchPointAppearance = EKTouchPointAppearance(),
                 contextMenuApperance: EKContextAppearance = EKContextAppearance()) {
         self.touchPoint = touchPointApperance
         self.contextMenu = contextMenuApperance
@@ -21,14 +21,14 @@ public struct EKApperance {
 }
 
 
-public struct EKTouchPointApperance:EKBuilder {
+public struct EKTouchPointAppearance:EKBuilder {
     public init() {}
     
     /// The colour of the touch location view // default white
     var borderColor: UIColor = .white
     
-    /// The size of the touch location view // default 35
-    var size: CGSize = .init(width: 45, height: 45)
+    /// The size of the touch location view // default 45
+    var size: CGFloat = 45
     
     /// The size of the touch location view // default value 3
     var borderWidth:CGFloat = 7
@@ -43,6 +43,11 @@ public struct EKContextAppearance:EKBuilder {
     /// The background's colour of the view // default black
     var backgroundColor: UIColor = .black
     
+    var itemsDistance:CGFloat = 20
+    
+    /// The distance from item to touchPoint view
+    var distanceFromItemToTouchPoint:CGFloat = 30
+    
 }
 
 
@@ -54,11 +59,11 @@ public struct EKContextMenuItemAppearance: EKBuilder {
     /// The items' icons active color
     var iconsActiveColor:UIColor?
     
-    /// The size of the item view // default 35
-    var size: CGSize = .init(width: 45, height: 45)
+    /// The size of the item view // default 45
+    var size: CGFloat = 45
     
     /// The background's colour of the view // default black
-    var backgroundColor: UIColor = .black
+    var backgroundColor: UIColor = .white
     
     
     var dampingRatio:CGFloat = 0.4
