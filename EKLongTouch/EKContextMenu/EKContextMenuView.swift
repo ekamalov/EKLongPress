@@ -142,3 +142,22 @@ extension EKContextMenuView {
     }
 }
 
+
+
+extension EKContextMenuView {
+    var contextMenuAppearance:EKContextAppearance {
+        return properties.appearance.contextMenu
+    }
+    var touchPointAppearance:EKTouchPointAppearance {
+        return properties.appearance.touchPoint
+    }
+    var itemSize: CGFloat {
+        guard let size = properties.items.first?.appearance.size else {
+            return EKContextMenuItemAppearance().size
+        }
+        return size
+    }
+}
+
+
+
