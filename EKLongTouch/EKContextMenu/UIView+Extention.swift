@@ -27,3 +27,10 @@ extension UIView {
         views.forEach { addSubview($0) }
     }
 }
+
+
+internal extension CGFloat {
+    var degrees: CGFloat {
+        return self * CGFloat.pi / 180.0
+    }
+}
