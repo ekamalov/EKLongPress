@@ -9,8 +9,6 @@
 import UIKit
 
 class EKContextMenuView: UIView{
-    private var distanceToTouchPointView: CGFloat = 30
-    private var itemDistance:(x:CGFloat, y:CGFloat) = (x:1, y:1)
     
     private var properties: EKContextMenu!
     
