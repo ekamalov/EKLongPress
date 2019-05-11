@@ -50,7 +50,6 @@ public struct EKContextAppearance:EKBuilder {
     
 }
 
-
 public struct EKContextMenuItemAppearance: EKBuilder {
     public init() {}
     /// The items' icons default color

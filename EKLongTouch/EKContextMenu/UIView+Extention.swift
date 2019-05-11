@@ -30,7 +30,7 @@ extension UIView {
 
 
 internal extension CGFloat {
-    var degrees: CGFloat {
-        return self * CGFloat.pi / 180.0
+    var toRadians: CGFloat {
+        return self * (.pi / 180.0)
     }
 }

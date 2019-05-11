@@ -18,14 +18,20 @@ protocol test {
 
 class ViewController: UIViewController {
     
+    var itemAppearance:EKContextMenuItemAppearance!
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var text: UITextField!
+    
+    
     @IBAction func change(_ sender: Any) {
         self.text.isSecureTextEntry = !self.text.isSecureTextEntry
     }
     
     
-    
+    var viewW: UIView  = .build{
+        $0.backgroundColor = .red
+    }
     
     lazy var collectionView: UICollectionView = {
         let layout = SPCollectionViewLayout()
@@ -41,16 +47,30 @@ class ViewController: UIViewController {
         cv.delegate = self
         return cv
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(collectionView)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+//        self.view.addSubview(collectionView)
+//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
+       
         
-        collectionView.layout {
-            $0.left.right.margin(0).top(50).height(250)
+        self.view.addSubview(viewW)
+       
+       
+        
+        viewW.layout {
+            $0.all(0)
         }
+        
+        let cons =  EKContextMenu(items: [.init(),.init(),.init(),.init()], appearance: .init(touchPointApperance: .build{
+            $0.borderColor = .white
+            $0.size = 45
+            }))
+        viewW.addGestureRecognizer(cons.buildGesture())
+        
+//        collectionView.layout {
+//            $0.left.right.margin(0).top(50).height(250)
+//        }
       
        
     }
@@ -67,7 +87,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         return 15
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CVCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CVCell.identifier, for: indexPath) as! CVCell
+        cell.viewController = self
+        cell.addGesture()
         cell.backgroundColor = .red
         cell.layer.cornerRadius = 10
         return cell
@@ -77,27 +99,31 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
 
 class CVCell: UICollectionViewCell {
     static let identifier = "CVCell"
+    var viewController:ViewController!
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        let cons =  EKContextMenu(items: [.init(), .init()], appearance: .init(touchPointApperance: .build{
-            $0.borderColor = .black
-            $0.size = .init(width: 35, height: 35)
+    }
+    func addGesture(){
+        let item:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
+        let item2:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
+        let item3:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
+        let item4:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
+
+        let cons =  EKContextMenu(items: [item,item2,item3,item4,item,item2,item3,item4], appearance: .init(touchPointApperance: .build{
+            $0.borderColor = .white
+            $0.size = 45
             }))
-        
-        //        let a:EKContextMenuItemAppearance = .build(block: {
-        //            $0.iconsActiveColor = .red
-        //        })
-        
-        
-        
-        let s = UIView()
-        s.backgroundColor = .red
-        s.clipsToBounds = true
         addGestureRecognizer(cons.buildGesture())
     }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
+
+
+
+
+
+
+
+
