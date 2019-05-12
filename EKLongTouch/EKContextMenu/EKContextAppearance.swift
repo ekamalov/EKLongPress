@@ -59,7 +59,7 @@ public struct EKContextMenuItemAppearance: EKBuilder {
     var iconsActiveColor:UIColor?
     
     /// The size of the item view // default 45
-    var size: CGFloat = 45
+    var size: CGFloat = 56
     
     /// The background's colour of the view // default black
     var backgroundColor: UIColor = .white

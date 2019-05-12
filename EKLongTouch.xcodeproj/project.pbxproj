@@ -11,7 +11,6 @@
 		4515FE19227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
 		4515FE1A227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
 		4515FE1B227C188A0060B4CB /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* UIView+Extention.swift */; };
-		4527E1AC2259D42F002A7D07 /* SPCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527E1AB2259D42F002A7D07 /* SPCollectionViewLayout.swift */; };
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
 		45774E10225776650040062E /* EKContextAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKContextAppearance.swift */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		4515FE15227AE1C30060B4CB /* EKLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKLayout.framework; path = Carthage/Build/iOS/EKLayout.framework; sourceTree = "<group>"; };
 		4515FE18227C188A0060B4CB /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
-		4527E1AB2259D42F002A7D07 /* SPCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayout.swift; sourceTree = "<group>"; };
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
 		45774E0F225776650040062E /* EKContextAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextAppearance.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				45ABAAAD224CD97700A21AB4 /* Assets.xcassets */,
 				45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */,
 				45ABAAB2224CD97700A21AB4 /* Info.plist */,
-				4527E1AB2259D42F002A7D07 /* SPCollectionViewLayout.swift */,
 			);
 			path = EKLongTouch;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 				45774E10225776650040062E /* EKContextAppearance.swift in Sources */,
 				45ABAAA9224CD97600A21AB4 /* ViewController.swift in Sources */,
 				45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */,
-				4527E1AC2259D42F002A7D07 /* SPCollectionViewLayout.swift in Sources */,
 				45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */,
 				45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */,
 				45D7B98C224DE10700E0C6B0 /* EKContextMenuItem.swift in Sources */,

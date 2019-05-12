@@ -37,6 +37,7 @@
                             <constraint firstItem="dmn-wo-5zj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5W9-fd-yL5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="epU-Rt-9re" secondAttribute="trailing" constant="20" id="Kfh-aj-DxG"/>
                             <constraint firstItem="dmn-wo-5zj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MyR-gi-KBt"/>
+                            <constraint firstItem="epU-Rt-9re" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmn-wo-5zj" secondAttribute="trailing" constant="8" symbolic="YES" id="XE2-sJ-V5C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="epU-Rt-9re" secondAttribute="bottom" id="t9g-ze-bw5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

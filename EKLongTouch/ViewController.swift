@@ -18,7 +18,6 @@ protocol test {
 
 class ViewController: UIViewController {
     
-    var itemAppearance:EKContextMenuItemAppearance!
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var text: UITextField!
@@ -34,12 +33,7 @@ class ViewController: UIViewController {
     }
     
     lazy var collectionView: UICollectionView = {
-        let layout = SPCollectionViewLayout()
-        layout.isPaging = true
-        layout.minimumLineSpacing = 10
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: mainScreenWidth-40, height: 67)
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let cv = UICollectionView(frame: .zero)
         cv.backgroundColor = .white
         cv.showsHorizontalScrollIndicator = false
         cv.register(CVCell.self, forCellWithReuseIdentifier: CVCell.identifier)
@@ -49,28 +43,33 @@ class ViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.addSubview(collectionView)
-//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        self.view.addSubview(collectionView)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
        
-        
-        self.view.addSubview(viewW)
-       
-       
-        
-        viewW.layout {
-            $0.all(0)
-        }
-        
-        let cons =  EKContextMenu(items: [.init(),.init(),.init(),.init()], appearance: .init(touchPointApperance: .build{
-            $0.borderColor = .white
-            $0.size = 45
-            }))
-        viewW.addGestureRecognizer(cons.buildGesture())
-        
-//        collectionView.layout {
-//            $0.left.right.margin(0).top(50).height(250)
+//
+//        self.view.addSubview(viewW)
+//
+//
+//
+//        viewW.layout {
+//            $0.all(0)
 //        }
+//
+//        let item:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .gray })
+//        let item2:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .green })
+//        let item3:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .yellow })
+//        let item4:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .blue })
+//
+//        let cons =  EKContextMenu(items: [item,item2,item3,item4], appearance: .init(touchPointApperance: .build{
+//            $0.borderColor = .white
+//            $0.size = 35
+//            }))
+//        viewW.addGestureRecognizer(cons.buildGesture())
+        
+        collectionView.layout {
+            $0.left.right.margin(0).top(50).height(250)
+        }
       
        
     }
@@ -104,10 +103,10 @@ class CVCell: UICollectionViewCell {
         super.init(frame: frame)
     }
     func addGesture(){
-        let item:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
-        let item2:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
-        let item3:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
-        let item4:EKContextMenuItem = .init(appearance: viewController.itemAppearance)
+        let item:EKContextMenuItem = .init()
+        let item2:EKContextMenuItem = .init()
+        let item3:EKContextMenuItem = .init()
+        let item4:EKContextMenuItem = .init()
 
         let cons =  EKContextMenu(items: [item,item2,item3,item4,item,item2,item3,item4], appearance: .init(touchPointApperance: .build{
             $0.borderColor = .white
