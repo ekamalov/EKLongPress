@@ -1,0 +1,56 @@
+[
+    {
+        "preview" : "thrones",
+        "name" : "Game of Thrones",
+        "channel" : "HBO",
+        "seasongs" : 8
+    },
+    {
+        "preview" : "billions",
+        "name" : "Billions",
+        "channel" : "Showtime",
+        "seasongs" : 8
+    },
+    {
+        "preview" : "vikings",
+        "name" : "Vikings",
+        "channel" : "History",
+        "seasongs" : 5
+    },
+    {
+        "preview" : "valley",
+        "name" : "Silicon Valley",
+        "channel" : "HBO",
+        "seasongs" : 5
+    },
+    {
+        "preview" : "californication",
+        "name" : "Californication",
+        "channel" : "Showtime",
+        "seasongs" : 7
+    },
+    {
+        "preview" : "gods",
+        "name" : "American Gods",
+        "channel" : "Starz",
+        "seasongs" : 2
+    },
+    {
+        "preview" : "detective",
+        "name" : "True Detective",
+        "channel" : "HBO",
+        "seasongs" : 3
+    },
+    {
+        "preview" : "dexter",
+        "name" : "Dexter",
+        "channel" : "Showtime",
+        "seasongs" : 8
+    },
+    {
+        "preview" : "fight",
+        "name" : "The Good Fight",
+        "channel" : "CBS",
+        "seasongs" : 3
+    }
+]
