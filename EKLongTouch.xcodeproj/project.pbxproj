@@ -14,15 +14,22 @@
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
 		45774E10225776650040062E /* EKContextAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKContextAppearance.swift */; };
+		45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */; };
+		45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */; };
+		45A32B0222B3BE410083C4E8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A32B0122B3BE410083C4E8 /* APIService.swift */; };
+		45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */; };
 		45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */; };
-		45ABAAA9224CD97600A21AB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAA8224CD97600A21AB4 /* ViewController.swift */; };
-		45ABAAAC224CD97600A21AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45ABAAAA224CD97600A21AB4 /* Main.storyboard */; };
+		45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */; };
 		45ABAAAE224CD97700A21AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ABAAAD224CD97700A21AB4 /* Assets.xcassets */; };
 		45ABAAB1224CD97700A21AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */; };
 		45ABAABC224CD97700A21AB4 /* EKLongTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAABB224CD97700A21AB4 /* EKLongTouchTests.swift */; };
 		45ABAAC7224CD97700A21AB4 /* EKLongTouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAC6224CD97700A21AB4 /* EKLongTouchUITests.swift */; };
 		45D7B98A224DDDDC00E0C6B0 /* EKContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */; };
 		45D7B98C224DE10700E0C6B0 /* EKContextMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */; };
+		45F0AB5122B212DA003760A3 /* HitFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5022B212DA003760A3 /* HitFeed.swift */; };
+		45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F0AB5322B2158E003760A3 /* HitFeed.json */; };
+		45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */; };
+		45F0AB5A22B35A3A003760A3 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5922B35A3A003760A3 /* AppAppearance.swift */; };
 		45FF3C95225CA584007C4F5F /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3C94225CA584007C4F5F /* Cartfile */; };
 		45FF3C9A225CC4A9007C4F5F /* EKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FF3C99225CC4A9007C4F5F /* EKKit.framework */; };
 		45FF3D1A2260AAA3007C4F5F /* EKBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FF3D192260AAA3007C4F5F /* EKBuilder.framework */; };
@@ -51,10 +58,13 @@
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
 		45774E0F225776650040062E /* EKContextAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextAppearance.swift; sourceTree = "<group>"; };
+		45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		45A32B0122B3BE410083C4E8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedHeader.swift; sourceTree = "<group>"; };
 		45ABAAA3224CD97600A21AB4 /* EKLongTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKLongTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45ABAAA8224CD97600A21AB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		45ABAAAB224CD97600A21AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedViewController.swift; sourceTree = "<group>"; };
 		45ABAAAD224CD97700A21AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45ABAAB0224CD97700A21AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45ABAAB2224CD97700A21AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +76,10 @@
 		45ABAAC8224CD97700A21AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuView.swift; sourceTree = "<group>"; };
 		45D7B98B224DE10700E0C6B0 /* EKContextMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuItem.swift; sourceTree = "<group>"; };
+		45F0AB5022B212DA003760A3 /* HitFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeed.swift; sourceTree = "<group>"; };
+		45F0AB5322B2158E003760A3 /* HitFeed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HitFeed.json; sourceTree = "<group>"; };
+		45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedCell.swift; sourceTree = "<group>"; };
+		45F0AB5922B35A3A003760A3 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		45FF3C94225CA584007C4F5F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		45FF3C99225CC4A9007C4F5F /* EKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKKit.framework; path = Carthage/Build/iOS/EKKit.framework; sourceTree = "<group>"; };
 		45FF3D192260AAA3007C4F5F /* EKBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKBuilder.framework; path = Carthage/Build/iOS/EKBuilder.framework; sourceTree = "<group>"; };
@@ -99,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45A32AFB22B3AC720083C4E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */,
+				45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		45A32B0022B3BE240083C4E8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				45A32B0122B3BE410083C4E8 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		45ABAA9A224CD97600A21AB4 = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				45D7B988224DDDC800E0C6B0 /* EKContextMenu */,
+				45A32B0022B3BE240083C4E8 /* Service */,
+				45F0AB4922B211BA003760A3 /* Model */,
+				45F0AB4E22B21275003760A3 /* Controller */,
+				45F0AB4A22B211CB003760A3 /* View */,
+				45F0AB5B22B35E52003760A3 /* Supporting Files */,
+				45F0AB5222B21561003760A3 /* Resource */,
 				45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */,
-				45ABAAA8224CD97600A21AB4 /* ViewController.swift */,
-				45ABAAAA224CD97600A21AB4 /* Main.storyboard */,
-				45ABAAAD224CD97700A21AB4 /* Assets.xcassets */,
-				45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */,
-				45ABAAB2224CD97700A21AB4 /* Info.plist */,
+				45F0AB5922B35A3A003760A3 /* AppAppearance.swift */,
 			);
 			path = EKLongTouch;
 			sourceTree = "<group>";
@@ -164,6 +197,50 @@
 				4515FE18227C188A0060B4CB /* UIView+Extention.swift */,
 			);
 			path = EKContextMenu;
+			sourceTree = "<group>";
+		};
+		45F0AB4922B211BA003760A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45F0AB5022B212DA003760A3 /* HitFeed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45F0AB4A22B211CB003760A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */,
+				45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45F0AB4E22B21275003760A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45F0AB5222B21561003760A3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				45A32AFB22B3AC720083C4E8 /* Fonts */,
+				45ABAAAD224CD97700A21AB4 /* Assets.xcassets */,
+				45F0AB5322B2158E003760A3 /* HitFeed.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		45F0AB5B22B35E52003760A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */,
+				45ABAAB2224CD97700A21AB4 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		45FF3C8A225CA200007C4F5F /* Frameworks */ = {
@@ -282,9 +359,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ABAAB1224CD97700A21AB4 /* LaunchScreen.storyboard in Resources */,
+				45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */,
+				45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */,
+				45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */,
 				45ABAAAE224CD97700A21AB4 /* Assets.xcassets in Resources */,
 				45FF3C95225CA584007C4F5F /* Cartfile in Resources */,
-				45ABAAAC224CD97600A21AB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,13 +416,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D7B98A224DDDDC00E0C6B0 /* EKContextMenuView.swift in Sources */,
+				45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */,
 				45774E10225776650040062E /* EKContextAppearance.swift in Sources */,
-				45ABAAA9224CD97600A21AB4 /* ViewController.swift in Sources */,
+				45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */,
+				45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */,
 				45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */,
 				45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */,
 				45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */,
 				45D7B98C224DE10700E0C6B0 /* EKContextMenuItem.swift in Sources */,
+				45A32B0222B3BE410083C4E8 /* APIService.swift in Sources */,
+				45F0AB5122B212DA003760A3 /* HitFeed.swift in Sources */,
 				4515FE19227C188A0060B4CB /* UIView+Extention.swift in Sources */,
+				45F0AB5A22B35A3A003760A3 /* AppAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,14 +465,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45ABAAAA224CD97600A21AB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45ABAAAB224CD97600A21AB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -526,7 +602,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = EKLongTouch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EKLongTouch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,7 +624,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = EKLongTouch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EKLongTouch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

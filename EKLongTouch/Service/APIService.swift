@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class APIService {
+   class func fetchPopularPhoto(completion:  @escaping (Result<HitFeeds,Error>) -> Void) {
+        DispatchQueue.global().async {
+            if let path = Bundle.main.path(forResource: "HitFeed", ofType: "json") {
+                do {
+                    let fileUrl = URL(fileURLWithPath: path)
+                    let data = try Data(contentsOf: fileUrl)
+                    let res = try JSONDecoder().decode(HitFeeds.self, from: data)
+                    completion(.success(res))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+}
+
+
+

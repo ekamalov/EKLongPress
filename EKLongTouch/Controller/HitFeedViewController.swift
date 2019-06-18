@@ -9,92 +9,63 @@
 import UIKit
 import EKKit
 import EKLayout
-
-var mainScreenWidth = UIScreen.main.bounds.width
-
-protocol test {
-    var bordorColor:UIColor { get }
-}
-
+var mainScreen = UIScreen.main.bounds
 class HitFeedViewController: UIViewController {
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var text: UITextField!
     
-    @IBAction func change(_ sender: Any) {
-        self.text.isSecureTextEntry = !self.text.isSecureTextEntry
-    }
-    var viewW: UIView  = .build{
-        $0.backgroundColor = .red
-    }
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width, height: 90)
+        layout.itemSize = CGSize.init(width: mainScreen.width, height: 90)
+        layout.headerReferenceSize = CGSize.init(width: mainScreen.width, height: 183)
+        layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .white
-        cv.showsHorizontalScrollIndicator = false
+        cv.backgroundColor = Colors.darkBackground.value
         cv.register(HitFeedCell.self, forCellWithReuseIdentifier: HitFeedCell.identifier)
+        cv.register(HitFeedHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HitFeedHeader.identifier)
         cv.dataSource = self
         cv.delegate = self
         return cv
     }()
+    
+    var items:HitFeeds = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(collectionView)
+        APIService.fetchPopularPhoto { result in
+            switch result{
+            case .success(let items): self.items = items
+            case .failure(let error): print(error)
+            }
+        }
     }
-    
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.layout {
-            $0.all(0)
+            $0.top(36).left.right.bottom.margin(0)
         }
-        
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension HitFeedViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return items.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HitFeedCell.identifier, for: indexPath) as! HitFeedCell
         cell.viewController = self
+        cell.data = items[indexPath.row]
         cell.addGesture()
-        cell.backgroundColor = .red
-        cell.layer.cornerRadius = 10
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader{
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                                         withReuseIdentifier: HitFeedHeader.identifier, for: indexPath)
+            return header
+        }
+        fatalError()
+    }
 }
 
-
-
-
-
-
-
-
-
-
-//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-
-//
-//        self.view.addSubview(viewW)
-//
-//
-//
-//        viewW.layout {
-//            $0.all(0)
-//        }
-//
-//        let item:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .gray })
-//        let item2:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .green })
-//        let item3:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .yellow })
-//        let item4:EKContextMenuItem = .init(appearance: .build {$0.backgroundColor = .blue })
-//
-//        let cons =  EKContextMenu(items: [item,item2,item3,item4], appearance: .init(touchPointApperance: .build{
-//            $0.borderColor = .white
-//            $0.size = 35
-//            }))
-//        viewW.addGestureRecognizer(cons.buildGesture())
