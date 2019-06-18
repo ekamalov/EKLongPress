@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import EKKit
-import EKLayout
+
 var mainScreen = UIScreen.main.bounds
 class HitFeedViewController: UIViewController {
     

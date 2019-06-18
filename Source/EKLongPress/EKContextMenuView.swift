@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class EKContextMenuView: UIView{
     
     private var properties: EKContextMenu!
@@ -49,8 +48,6 @@ class EKContextMenuView: UIView{
         calcDistanceFromItemToTouchPoint()
         let startAngle = self.startAngleAtDirection()
         self.anglePosition = calcItemsContentSize(start: startAngle)
-        
-       
         
         let size = itemDistanceToTouchPoint * 2 + itemSize
         

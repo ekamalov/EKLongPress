@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 open class EKContextMenuItem: UIButton {
     var appearance:EKContextMenuItemAppearance
     var endPosition:CGPoint = .zero

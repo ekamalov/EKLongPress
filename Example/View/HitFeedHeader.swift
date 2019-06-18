@@ -8,6 +8,7 @@
 
 import UIKit
 import EKLayout
+
 class HitFeedHeader:UICollectionReusableView {
     static let identifier = "HitFeedHeader"
 

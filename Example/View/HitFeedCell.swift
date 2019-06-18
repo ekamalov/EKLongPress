@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EKBuilder
 
 class HitFeedCell: UICollectionViewCell {
     static let identifier = "HitFeedCell"

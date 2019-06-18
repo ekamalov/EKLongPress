@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EKKit
 
 class EKContextMenuGesture: UILongPressGestureRecognizer {
     
@@ -21,7 +20,6 @@ class EKContextMenuGesture: UILongPressGestureRecognizer {
             assertionFailure("Can't access to UIApplication Window")
             return
         }
-        
         self.window = window
         self.properties = builder
         addTarget(self, action:  #selector(touchAction))
@@ -39,8 +37,6 @@ class EKContextMenuGesture: UILongPressGestureRecognizer {
     }
 }
 
-
-
 extension EKContextMenuGesture {
     /// Trigger the events for when the touch begins
     func longPressBegan(on location:CGPoint) {
@@ -57,18 +53,18 @@ extension EKContextMenuGesture {
         guard let view = getHighlightedSnapshot() else { return }
         contextView = EKContextMenuView(touchPoint: location,highlighted: view, properties: properties)
         
-        EKTransition.transit(_with: self.window, 0.3, animations: {
+        
+        UIView.transition(with: self.window, duration: 0.3, options: [.transitionCrossDissolve], animations: {
             self.window.addSubview(self.contextView)
-        }, options: [.transitionCrossDissolve])
+        })
     }
     /// Removes the JonContextMenu view from the Window
     func dismissMenu(){
-        EKTransition.transit(_with: self.window, 0.2, animations: {
-             self.contextView.removeFromSuperview()
-        }, options: [.transitionCrossDissolve])
+        UIView.transition(with: self.window, duration: 0.2, options: [.transitionCrossDissolve], animations: {
+            self.contextView.removeFromSuperview()
+        })
         self.contextView = nil
     }
-    
     /// Gets a snapshot of the touched highlighted view
     func getHighlightedSnapshot() -> UIView? {
         guard let view = self.view,

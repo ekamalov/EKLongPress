@@ -1,4 +1,2 @@
-github "erikkamalov/EKKit" ~> 1.0.2
-github "erikkamalov/EKBuilder"
 
-github "erikkamalov/EKLayout" ~> 1.0.1
+github "erikkamalov/EKLayout" "1.0.1"

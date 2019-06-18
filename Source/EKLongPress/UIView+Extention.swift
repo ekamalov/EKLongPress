@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 let screen = UIScreen.main.bounds
 
 extension UIView {
@@ -27,10 +28,21 @@ extension UIView {
         views.forEach { addSubview($0) }
     }
 }
-
-
 internal extension CGFloat {
     var toRadians: CGFloat {
         return self * (.pi / 180.0)
     }
 }
+
+
+public protocol Builder {
+    init()
+}
+extension Builder {
+    public static func build(_ block: (inout Self) throws -> Void) rethrows -> Self {
+        var copy = Self.self.init()
+        try block(&copy)
+        return copy
+    }
+}
+extension NSObject: Builder {}

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EKBuilder
 
 public struct EKAppearance {
     var touchPoint:EKTouchPointAppearance
@@ -20,8 +19,7 @@ public struct EKAppearance {
     }
 }
 
-
-public struct EKTouchPointAppearance:EKBuilder {
+public struct EKTouchPointAppearance:Builder {
     public init() {}
     
     /// The colour of the touch location view // default white
@@ -34,7 +32,7 @@ public struct EKTouchPointAppearance:EKBuilder {
     var borderWidth:CGFloat = 7
 }
 
-public struct EKContextAppearance:EKBuilder {
+public struct EKContextAppearance:Builder {
     public init() {}
     
     /// The background's alpha of the view. // default value 0.9
@@ -47,10 +45,9 @@ public struct EKContextAppearance:EKBuilder {
     
     /// The distance from item to touchPoint view
     var distanceFromItemToTouchPoint:CGFloat = 30
-    
 }
 
-public struct EKContextMenuItemAppearance: EKBuilder {
+public struct EKContextMenuItemAppearance:Builder {
     public init() {}
     /// The items' icons default color
     var iconsDefaultColor:UIColor?
@@ -62,13 +59,11 @@ public struct EKContextMenuItemAppearance: EKBuilder {
     var size: CGFloat = 56
     
     /// The background's colour of the view // default black
-    var backgroundColor: UIColor = .white
-    
-    
+    var backgroundColor: UIColor = .red
+
     var dampingRatio:CGFloat = 0.4
     var duration:Double = 1
     var delay:Double = 0.3
-    
 }
 
 
