@@ -36,6 +36,7 @@ class HitFeedViewController: UIViewController {
             }
         }
     }
+ 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.layout {
@@ -67,4 +68,3 @@ extension HitFeedViewController: UICollectionViewDelegate,UICollectionViewDataSo
         fatalError()
     }
 }
-

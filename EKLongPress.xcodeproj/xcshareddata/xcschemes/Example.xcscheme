@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45ABAAA2224CD97600A21AB4"
                BuildableName = "EKLongTouch.app"
                BlueprintName = "EKLongTouch"
-               ReferencedContainer = "container:EKLongTouch.xcodeproj">
+               ReferencedContainer = "container:EKLongPress.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "45ABAAB6224CD97700A21AB4"
                BuildableName = "EKLongTouchTests.xctest"
                BlueprintName = "EKLongTouchTests"
-               ReferencedContainer = "container:EKLongTouch.xcodeproj">
+               ReferencedContainer = "container:EKLongPress.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "45ABAAC1224CD97700A21AB4"
                BuildableName = "EKLongTouchUITests.xctest"
                BlueprintName = "EKLongTouchUITests"
-               ReferencedContainer = "container:EKLongTouch.xcodeproj">
+               ReferencedContainer = "container:EKLongPress.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "45ABAAA2224CD97600A21AB4"
             BuildableName = "EKLongTouch.app"
             BlueprintName = "EKLongTouch"
-            ReferencedContainer = "container:EKLongTouch.xcodeproj">
+            ReferencedContainer = "container:EKLongPress.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "45ABAAA2224CD97600A21AB4"
             BuildableName = "EKLongTouch.app"
             BlueprintName = "EKLongTouch"
-            ReferencedContainer = "container:EKLongTouch.xcodeproj">
+            ReferencedContainer = "container:EKLongPress.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "45ABAAA2224CD97600A21AB4"
             BuildableName = "EKLongTouch.app"
             BlueprintName = "EKLongTouch"
-            ReferencedContainer = "container:EKLongTouch.xcodeproj">
+            ReferencedContainer = "container:EKLongPress.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

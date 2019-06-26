@@ -58,21 +58,27 @@ class HitFeedCell: UICollectionViewCell {
             $0.top(of: title, aligned: .bottom, 4, relation: .equal).right(20)
             $0.left(of: image, aligned: .right, 15, relation: .equal)
         }
-       
+        
     }
     func addGesture(){
-        let item:EKContextMenuItem = .init()
-        let item2:EKContextMenuItem = .init()
-        let item3:EKContextMenuItem = .init()
-        let item4:EKContextMenuItem = .init()
+        let save:EKItem = EKItem.init(title:"Save", icon: #imageLiteral(resourceName: "add"))
+        let play:EKItem = EKItem.init(title:"Watch Trailer", icon: #imageLiteral(resourceName: "play"))
+        let share:EKItem = EKItem.init(title:"Share", icon: #imageLiteral(resourceName: "share"))
+        let more:EKItem = EKItem.init(title:"More", icon: #imageLiteral(resourceName: "more"))
         
-        let cons =  EKContextMenu(items: [item,item2,item3,item4,item,item2,item3,item4], appearance: .init(touchPointApperance: .build{
-            $0.borderColor = .white
-            $0.size = 45
-            }))
+        var cons = EKContextMenu(items: [save,play,share,more], aling: .center,
+                                 appearance: .init(contextMenuApperance:
+                                    .build{
+                                        $0.titleFont = Fonts.GilroyBold.withSize(48)
+                                    }), debug: false)
+        cons.selected = { item in
+            print(item)
+        }
+        
         addGestureRecognizer(cons.buildGesture())
+       
     }
- 
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

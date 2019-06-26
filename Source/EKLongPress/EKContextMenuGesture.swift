@@ -10,9 +10,9 @@ import UIKit
 
 class EKContextMenuGesture: UILongPressGestureRecognizer {
     
-    private(set) var properties: EKContextMenu!
-    private(set) var window: UIWindow!
-    private(set) var contextView:EKContextMenuView!
+    private var properties: EKContextMenu!
+    private var window: UIWindow!
+    private var contextView:EKContextMenuView!
     
     public init(builder:EKContextMenu)  {
         super.init(target: nil, action:nil)
@@ -29,11 +29,12 @@ class EKContextMenuGesture: UILongPressGestureRecognizer {
         let location = self.location(in: window)
         switch self.state {
         case .began: longPressBegan(on: location)
-        case .changed: break
-        case .ended: dismissMenu()
-        case .cancelled: dismissMenu()
-        default: break
+        case .changed: longPressMoved(to: location)
+        default: longPressEnded()
         }
+    }
+    deinit {
+        print("Sdcds")
     }
 }
 
@@ -44,27 +45,35 @@ extension EKContextMenuGesture {
     }
     /// Triggers the events for when the touch ends
     func longPressEnded() {
+        if let item = contextView.activateItem, let selected = properties.selected {
+            item.wrapper.center = .init(x: item.appearance.size / 2, y:  item.appearance.size / 2)
+            item.isActive = false
+            selected(item)
+        }
+        dismissMenu()
     }
+    
     /// Triggers the events for when the touch moves
     func longPressMoved(to location:CGPoint) {
+        contextView.longPressMoved(to: location)
     }
-    /// Creates the JonContextMenu view and adds to the Window
+    
+    /// Creates the EKContextMenuView view and adds to the Window
     func showMenu(on location:CGPoint){
         guard let view = getHighlightedSnapshot() else { return }
         contextView = EKContextMenuView(touchPoint: location,highlighted: view, properties: properties)
-        
-        
         UIView.transition(with: self.window, duration: 0.3, options: [.transitionCrossDissolve], animations: {
             self.window.addSubview(self.contextView)
         })
     }
-    /// Removes the JonContextMenu view from the Window
+    /// Removes the EKContextMenuView  view from the Window
     func dismissMenu(){
         UIView.transition(with: self.window, duration: 0.2, options: [.transitionCrossDissolve], animations: {
             self.contextView.removeFromSuperview()
         })
         self.contextView = nil
     }
+    
     /// Gets a snapshot of the touched highlighted view
     func getHighlightedSnapshot() -> UIView? {
         guard let view = self.view,
