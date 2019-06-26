@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		450AADDE22B8CC9800D50833 /* EKLongPress.h in Headers */ = {isa = PBXBuildFile; fileRef = 450AADDC22B8CC9800D50833 /* EKLongPress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		450AADE122B8CC9800D50833 /* EKLongPress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450AADDA22B8CC9800D50833 /* EKLongPress.framework */; };
+		450AADE222B8CC9800D50833 /* EKLongPress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 450AADDA22B8CC9800D50833 /* EKLongPress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		450AADE822B8CD8800D50833 /* EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKAppearance.swift */; };
+		450AADEA22B8CD8800D50833 /* EKContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */; };
+		450AADEB22B8CD8800D50833 /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
+		450AADEC22B8CD8800D50833 /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
+		450AADED22B8CD8800D50833 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* Extention.swift */; };
+		450AADF022B8DAC000D50833 /* EKLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4515FE15227AE1C30060B4CB /* EKLayout.framework */; };
+		450AAE0F22BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */; };
+		450AAE1022BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */; };
+		4515FE19227C188A0060B4CB /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* Extention.swift */; };
+		452ADA1622BCFFBF005CAE62 /* EKItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItem.swift */; };
+		452ADA1722BCFFBF005CAE62 /* EKItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItem.swift */; };
+		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
+		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
+		45774E10225776650040062E /* EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKAppearance.swift */; };
+		45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */; };
+		45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */; };
+		45A32B0222B3BE410083C4E8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A32B0122B3BE410083C4E8 /* APIService.swift */; };
+		45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */; };
+		45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */; };
+		45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */; };
+		45ABAAAE224CD97700A21AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ABAAAD224CD97700A21AB4 /* Assets.xcassets */; };
+		45ABAAB1224CD97700A21AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */; };
+		45D7B98A224DDDDC00E0C6B0 /* EKContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */; };
+		45F0AB5122B212DA003760A3 /* HitFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5022B212DA003760A3 /* HitFeed.swift */; };
+		45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F0AB5322B2158E003760A3 /* HitFeed.json */; };
+		45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */; };
+		45F0AB5A22B35A3A003760A3 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5922B35A3A003760A3 /* AppAppearance.swift */; };
+		45FF3C95225CA584007C4F5F /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3C94225CA584007C4F5F /* Cartfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		450AADDF22B8CC9800D50833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45ABAA9B224CD97600A21AB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 450AADD922B8CC9800D50833;
+			remoteInfo = EKLongPress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		450AADE622B8CC9800D50833 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				450AADE222B8CC9800D50833 /* EKLongPress.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		450AADDA22B8CC9800D50833 /* EKLongPress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EKLongPress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450AADDC22B8CC9800D50833 /* EKLongPress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKLongPress.h; sourceTree = "<group>"; };
+		450AADDD22B8CC9800D50833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionCalculator.swift; sourceTree = "<group>"; };
+		4515FE15227AE1C30060B4CB /* EKLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKLayout.framework; path = Carthage/Build/iOS/EKLayout.framework; sourceTree = "<group>"; };
+		4515FE18227C188A0060B4CB /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		452ADA1522BCFFBF005CAE62 /* EKItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKItem.swift; sourceTree = "<group>"; };
+		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
+		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
+		45774E0F225776650040062E /* EKAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKAppearance.swift; sourceTree = "<group>"; };
+		45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		45A32B0122B3BE410083C4E8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedHeader.swift; sourceTree = "<group>"; };
+		45ABAAA3224CD97600A21AB4 /* EKLongTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKLongTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedViewController.swift; sourceTree = "<group>"; };
+		45ABAAAD224CD97700A21AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45ABAAB0224CD97700A21AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45ABAAB2224CD97700A21AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuView.swift; sourceTree = "<group>"; };
+		45F0AB5022B212DA003760A3 /* HitFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeed.swift; sourceTree = "<group>"; };
+		45F0AB5322B2158E003760A3 /* HitFeed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HitFeed.json; sourceTree = "<group>"; };
+		45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedCell.swift; sourceTree = "<group>"; };
+		45F0AB5922B35A3A003760A3 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		45FF3C94225CA584007C4F5F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		45FF3C99225CC4A9007C4F5F /* EKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKKit.framework; path = Carthage/Build/iOS/EKKit.framework; sourceTree = "<group>"; };
+		45FF3D192260AAA3007C4F5F /* EKBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKBuilder.framework; path = Carthage/Build/iOS/EKBuilder.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		450AADD722B8CC9800D50833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45ABAAA0224CD97600A21AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450AADF022B8DAC000D50833 /* EKLayout.framework in Frameworks */,
+				450AADE122B8CC9800D50833 /* EKLongPress.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		450AADDB22B8CC9800D50833 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				450AADE722B8CCF000D50833 /* EKLongPress */,
+				450AADDC22B8CC9800D50833 /* EKLongPress.h */,
+				450AADDD22B8CC9800D50833 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		450AADE722B8CCF000D50833 /* EKLongPress */ = {
+			isa = PBXGroup;
+			children = (
+				452ADA1422BCFB08005CAE62 /* Apperance */,
+				450AAE0D22BA3B9300D50833 /* Helper */,
+				452ADA1522BCFFBF005CAE62 /* EKItem.swift */,
+				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
+				45774E0B225711FA0040062E /* EKContextMenuGesture.swift */,
+				45774E0D225745100040062E /* EKContextMenuBuilder.swift */,
+			);
+			path = EKLongPress;
+			sourceTree = "<group>";
+		};
+		450AAE0D22BA3B9300D50833 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */,
+				4515FE18227C188A0060B4CB /* Extention.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		452ADA1422BCFB08005CAE62 /* Apperance */ = {
+			isa = PBXGroup;
+			children = (
+				45774E0F225776650040062E /* EKAppearance.swift */,
+			);
+			path = Apperance;
+			sourceTree = "<group>";
+		};
+		45A32AFB22B3AC720083C4E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */,
+				45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		45A32B0022B3BE240083C4E8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				45A32B0122B3BE410083C4E8 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		45ABAA9A224CD97600A21AB4 = {
+			isa = PBXGroup;
+			children = (
+				45FF3C94225CA584007C4F5F /* Cartfile */,
+				45ABAAA5224CD97600A21AB4 /* Example */,
+				450AADDB22B8CC9800D50833 /* Source */,
+				45ABAAA4224CD97600A21AB4 /* Products */,
+				45FF3C8A225CA200007C4F5F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		45ABAAA4224CD97600A21AB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45ABAAA3224CD97600A21AB4 /* EKLongTouch.app */,
+				450AADDA22B8CC9800D50833 /* EKLongPress.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45ABAAA5224CD97600A21AB4 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				45A32B0022B3BE240083C4E8 /* Service */,
+				45F0AB4922B211BA003760A3 /* Model */,
+				45F0AB4E22B21275003760A3 /* Controller */,
+				45F0AB4A22B211CB003760A3 /* View */,
+				45F0AB5B22B35E52003760A3 /* Supporting Files */,
+				45F0AB5222B21561003760A3 /* Resource */,
+				45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */,
+				45F0AB5922B35A3A003760A3 /* AppAppearance.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		45F0AB4922B211BA003760A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45F0AB5022B212DA003760A3 /* HitFeed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45F0AB4A22B211CB003760A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */,
+				45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45F0AB4E22B21275003760A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45F0AB5222B21561003760A3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				45A32AFB22B3AC720083C4E8 /* Fonts */,
+				45ABAAAD224CD97700A21AB4 /* Assets.xcassets */,
+				45F0AB5322B2158E003760A3 /* HitFeed.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		45F0AB5B22B35E52003760A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */,
+				45ABAAB2224CD97700A21AB4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45FF3C8A225CA200007C4F5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4515FE15227AE1C30060B4CB /* EKLayout.framework */,
+				45FF3D192260AAA3007C4F5F /* EKBuilder.framework */,
+				45FF3C99225CC4A9007C4F5F /* EKKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		450AADD522B8CC9800D50833 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450AADDE22B8CC9800D50833 /* EKLongPress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		450AADD922B8CC9800D50833 /* EKLongPress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 450AADE322B8CC9800D50833 /* Build configuration list for PBXNativeTarget "EKLongPress" */;
+			buildPhases = (
+				450AADD522B8CC9800D50833 /* Headers */,
+				450AADD622B8CC9800D50833 /* Sources */,
+				450AADD722B8CC9800D50833 /* Frameworks */,
+				450AADD822B8CC9800D50833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EKLongPress;
+			productName = EKLongPress;
+			productReference = 450AADDA22B8CC9800D50833 /* EKLongPress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45ABAAA2224CD97600A21AB4 /* EKLongTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45ABAACB224CD97700A21AB4 /* Build configuration list for PBXNativeTarget "EKLongTouch" */;
+			buildPhases = (
+				45ABAA9F224CD97600A21AB4 /* Sources */,
+				45ABAAA0224CD97600A21AB4 /* Frameworks */,
+				45ABAAA1224CD97600A21AB4 /* Resources */,
+				45FF3C9B225CC4C2007C4F5F /* Carthage script */,
+				450AADE622B8CC9800D50833 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				450AADE022B8CC9800D50833 /* PBXTargetDependency */,
+			);
+			name = EKLongTouch;
+			productName = EKLongTouch;
+			productReference = 45ABAAA3224CD97600A21AB4 /* EKLongTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45ABAA9B224CD97600A21AB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "E K";
+				TargetAttributes = {
+					450AADD922B8CC9800D50833 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					45ABAAA2224CD97600A21AB4 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 45ABAA9E224CD97600A21AB4 /* Build configuration list for PBXProject "EKLongPress" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45ABAA9A224CD97600A21AB4;
+			productRefGroup = 45ABAAA4224CD97600A21AB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				450AADD922B8CC9800D50833 /* EKLongPress */,
+				45ABAAA2224CD97600A21AB4 /* EKLongTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		450AADD822B8CC9800D50833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45ABAAA1224CD97600A21AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45ABAAB1224CD97700A21AB4 /* LaunchScreen.storyboard in Resources */,
+				45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */,
+				45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */,
+				45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */,
+				45ABAAAE224CD97700A21AB4 /* Assets.xcassets in Resources */,
+				45FF3C95225CA584007C4F5F /* Cartfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45FF3C9B225CC4C2007C4F5F /* Carthage script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/EKLayout.framework",
+			);
+			name = "Carthage script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EKLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		450AADD622B8CC9800D50833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450AADEA22B8CD8800D50833 /* EKContextMenuView.swift in Sources */,
+				450AADE822B8CD8800D50833 /* EKAppearance.swift in Sources */,
+				450AADEC22B8CD8800D50833 /* EKContextMenuBuilder.swift in Sources */,
+				452ADA1622BCFFBF005CAE62 /* EKItem.swift in Sources */,
+				450AADEB22B8CD8800D50833 /* EKContextMenuGesture.swift in Sources */,
+				450AAE0F22BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */,
+				450AADED22B8CD8800D50833 /* Extention.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45ABAA9F224CD97600A21AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D7B98A224DDDDC00E0C6B0 /* EKContextMenuView.swift in Sources */,
+				45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */,
+				45774E10225776650040062E /* EKAppearance.swift in Sources */,
+				45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */,
+				45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */,
+				452ADA1722BCFFBF005CAE62 /* EKItem.swift in Sources */,
+				45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */,
+				45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */,
+				45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */,
+				45A32B0222B3BE410083C4E8 /* APIService.swift in Sources */,
+				45F0AB5122B212DA003760A3 /* HitFeed.swift in Sources */,
+				450AAE1022BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */,
+				4515FE19227C188A0060B4CB /* Extention.swift in Sources */,
+				45F0AB5A22B35A3A003760A3 /* AppAppearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		450AADE022B8CC9800D50833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 450AADD922B8CC9800D50833 /* EKLongPress */;
+			targetProxy = 450AADDF22B8CC9800D50833 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45ABAAAF224CD97700A21AB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45ABAAB0224CD97700A21AB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		450AADE422B8CC9800D50833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X4DFUD88BP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		450AADE522B8CC9800D50833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X4DFUD88BP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45ABAAC9224CD97700A21AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45ABAACA224CD97700A21AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45ABAACC224CD97700A21AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X4DFUD88BP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Neuron.EKLongTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45ABAACD224CD97700A21AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X4DFUD88BP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Neuron.EKLongTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		450AADE322B8CC9800D50833 /* Build configuration list for PBXNativeTarget "EKLongPress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				450AADE422B8CC9800D50833 /* Debug */,
+				450AADE522B8CC9800D50833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45ABAA9E224CD97600A21AB4 /* Build configuration list for PBXProject "EKLongPress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45ABAAC9224CD97700A21AB4 /* Debug */,
+				45ABAACA224CD97700A21AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45ABAACB224CD97700A21AB4 /* Build configuration list for PBXNativeTarget "EKLongTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45ABAACC224CD97700A21AB4 /* Debug */,
+				45ABAACD224CD97700A21AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45ABAA9B224CD97600A21AB4 /* Project object */;
+}
