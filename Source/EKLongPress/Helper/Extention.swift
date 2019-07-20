@@ -59,7 +59,7 @@ internal extension CGFloat {
     }
 }
 
-// MARK: - Builder
+// MARK: - Builder, you can look documentation in GitHub(https://github.com/erikkamalov/EKBuilder.git)
 public protocol Builder {
     init()
 }

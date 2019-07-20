@@ -128,7 +128,7 @@
 		450AADE722B8CCF000D50833 /* EKLongPress */ = {
 			isa = PBXGroup;
 			children = (
-				452ADA1422BCFB08005CAE62 /* Apperance */,
+				452ADA1422BCFB08005CAE62 /* Appearance */,
 				450AAE0D22BA3B9300D50833 /* Helper */,
 				452ADA1522BCFFBF005CAE62 /* EKItem.swift */,
 				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
@@ -147,12 +147,12 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		452ADA1422BCFB08005CAE62 /* Apperance */ = {
+		452ADA1422BCFB08005CAE62 /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
 				45774E0F225776650040062E /* EKAppearance.swift */,
 			);
-			path = Apperance;
+			path = Appearance;
 			sourceTree = "<group>";
 		};
 		45A32AFB22B3AC720083C4E8 /* Fonts */ = {
