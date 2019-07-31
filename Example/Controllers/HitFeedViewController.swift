@@ -29,7 +29,7 @@ class HitFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(collectionView)
-        APIService.fetchPopularPhoto { result in
+        APIService.fetchHitFeeds { result in
             switch result{
             case .success(let items): self.items = items
             case .failure(let error): print(error)

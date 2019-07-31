@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "fight.png",
       "idiom" : "universal",
+      "filename" : "fight.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "fight@2x.png"
+      "filename" : "fight@2x.png",
+      "scale" : "2x"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "fight@3x.png"
+      "filename" : "fight@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "californication.png"
+      "filename" : "californication.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "californication@2x.png"
+      "filename" : "californication@2x.png",
+      "scale" : "2x"
     },
     {
+      "idiom" : "universal",
       "filename" : "californication@3x.png",
-      "idiom" : "universal",
       "scale" : "3x"
     }
   ],
