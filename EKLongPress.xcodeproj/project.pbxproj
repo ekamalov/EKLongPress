@@ -196,50 +196,50 @@
 			isa = PBXGroup;
 			children = (
 				45A32B0022B3BE240083C4E8 /* Service */,
-				45F0AB4922B211BA003760A3 /* Model */,
-				45F0AB4E22B21275003760A3 /* Controller */,
-				45F0AB4A22B211CB003760A3 /* View */,
+				45F0AB4922B211BA003760A3 /* Models */,
+				45F0AB4E22B21275003760A3 /* Controllers */,
+				45F0AB4A22B211CB003760A3 /* Views */,
 				45F0AB5B22B35E52003760A3 /* Supporting Files */,
-				45F0AB5222B21561003760A3 /* Resource */,
+				45F0AB5222B21561003760A3 /* Resources */,
 				45ABAAA6224CD97600A21AB4 /* AppDelegate.swift */,
 				45F0AB5922B35A3A003760A3 /* AppAppearance.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		45F0AB4922B211BA003760A3 /* Model */ = {
+		45F0AB4922B211BA003760A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				45F0AB5022B212DA003760A3 /* HitFeed.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		45F0AB4A22B211CB003760A3 /* View */ = {
+		45F0AB4A22B211CB003760A3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */,
 				45A32B0322B3C4B60083C4E8 /* HitFeedHeader.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		45F0AB4E22B21275003760A3 /* Controller */ = {
+		45F0AB4E22B21275003760A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				45ABAAA8224CD97600A21AB4 /* HitFeedViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		45F0AB5222B21561003760A3 /* Resource */ = {
+		45F0AB5222B21561003760A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				45A32AFB22B3AC720083C4E8 /* Fonts */,
 				45ABAAAD224CD97700A21AB4 /* Assets.xcassets */,
 				45F0AB5322B2158E003760A3 /* HitFeed.json */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		45F0AB5B22B35E52003760A3 /* Supporting Files */ = {
@@ -646,6 +646,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,7 +654,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Neuron.EKLongTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -669,6 +670,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +678,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Neuron.EKLongTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

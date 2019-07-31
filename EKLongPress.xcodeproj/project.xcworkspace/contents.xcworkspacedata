@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/ek/Documents/My Frameworks/EKLongTouch/EKLongPress.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
