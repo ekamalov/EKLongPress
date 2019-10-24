@@ -19,8 +19,8 @@
 		450AAE0F22BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */; };
 		450AAE1022BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */; };
 		4515FE19227C188A0060B4CB /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* Extention.swift */; };
-		452ADA1622BCFFBF005CAE62 /* EKItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItem.swift */; };
-		452ADA1722BCFFBF005CAE62 /* EKItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItem.swift */; };
+		452ADA1622BCFFBF005CAE62 /* EKItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItemView.swift */; };
+		452ADA1722BCFFBF005CAE62 /* EKItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItemView.swift */; };
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
 		45774E10225776650040062E /* EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKAppearance.swift */; };
@@ -71,7 +71,7 @@
 		450AAE0E22BA3BBD00D50833 /* IntersectionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionCalculator.swift; sourceTree = "<group>"; };
 		4515FE15227AE1C30060B4CB /* EKLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKLayout.framework; path = Carthage/Build/iOS/EKLayout.framework; sourceTree = "<group>"; };
 		4515FE18227C188A0060B4CB /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
-		452ADA1522BCFFBF005CAE62 /* EKItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKItem.swift; sourceTree = "<group>"; };
+		452ADA1522BCFFBF005CAE62 /* EKItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKItemView.swift; sourceTree = "<group>"; };
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
 		45774E0F225776650040062E /* EKAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKAppearance.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				452ADA1422BCFB08005CAE62 /* Appearance */,
 				450AAE0D22BA3B9300D50833 /* Helper */,
-				452ADA1522BCFFBF005CAE62 /* EKItem.swift */,
+				452ADA1522BCFFBF005CAE62 /* EKItemView.swift */,
 				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
 				45774E0B225711FA0040062E /* EKContextMenuGesture.swift */,
 				45774E0D225745100040062E /* EKContextMenuBuilder.swift */,
@@ -404,7 +404,7 @@
 				450AADEA22B8CD8800D50833 /* EKContextMenuView.swift in Sources */,
 				450AADE822B8CD8800D50833 /* EKAppearance.swift in Sources */,
 				450AADEC22B8CD8800D50833 /* EKContextMenuBuilder.swift in Sources */,
-				452ADA1622BCFFBF005CAE62 /* EKItem.swift in Sources */,
+				452ADA1622BCFFBF005CAE62 /* EKItemView.swift in Sources */,
 				450AADEB22B8CD8800D50833 /* EKContextMenuGesture.swift in Sources */,
 				450AAE0F22BA3BBD00D50833 /* IntersectionCalculator.swift in Sources */,
 				450AADED22B8CD8800D50833 /* Extention.swift in Sources */,
@@ -420,7 +420,7 @@
 				45774E10225776650040062E /* EKAppearance.swift in Sources */,
 				45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */,
 				45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */,
-				452ADA1722BCFFBF005CAE62 /* EKItem.swift in Sources */,
+				452ADA1722BCFFBF005CAE62 /* EKItemView.swift in Sources */,
 				45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */,
 				45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */,
 				45ABAAA7224CD97600A21AB4 /* AppDelegate.swift in Sources */,

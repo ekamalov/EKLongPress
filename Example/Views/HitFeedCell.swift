@@ -21,13 +21,11 @@ class HitFeedCell: UICollectionViewCell {
     
     lazy var title:UILabel = .build {
         $0.textColor = Colors.lightText.value
-        $0.text = "Test"
         $0.font = Fonts.GilroyBold.withSize(23)
     }
     
     lazy var subTitle:UILabel = .build {
         $0.textColor = Colors.lightText.withAlpha(0.4)
-        $0.text = "sub title"
         $0.font = Fonts.GilroySemiBold.withSize(16)
     }
     
@@ -42,41 +40,29 @@ class HitFeedCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubviews(title,subTitle,seperatorView,image)
-    }
-    
-    override func layoutSubviews() {
-        image.layout {
-            $0.left(20).top.bottom.margin(15).width(60)
-        }
-        seperatorView.layout {
-            $0.left.right.margin(20).top(0).height(1)
-        }
-        title.layout {
-            $0.left(of: image, aligned: .right, 15, relation: .equal).top(20).right(10)
-        }
+        
+        image.layout { $0.left(20).top.bottom.margin(15).width(60) }
+        seperatorView.layout { $0.left.right.margin(20).top(0).height(1) }
+        title.layout { $0.left(of: image, aligned: .right, 15, relation: .equal).top(20).right(10) }
         subTitle.layout {
             $0.top(of: title, aligned: .bottom, 4, relation: .equal).right(20)
             $0.left(of: image, aligned: .right, 15, relation: .equal)
         }
-        
+        addGesture()
     }
+    
     func addGesture(){
         let save:EKItem = EKItem.init(title:"Save", icon: #imageLiteral(resourceName: "add"))
         let play:EKItem = EKItem.init(title:"Watch Trailer", icon: #imageLiteral(resourceName: "play"))
         let share:EKItem = EKItem.init(title:"Share", icon: #imageLiteral(resourceName: "share"))
         let more:EKItem = EKItem.init(title:"More", icon: #imageLiteral(resourceName: "more"))
         
-        var cons = EKContextMenu(items: [save,play,share,more], aling: .center,
-                                 appearance: .init(contextMenuApperance:
-                                    .build{
-                                        $0.titleFont = Fonts.GilroyBold.withSize(48)
-                                    }), debug: false)
-        cons.selected = { item in
-            print(item)
-        }
+        var cons = EKContextMenu(items: [save,play,share,more], aling: .center, selectedItem: nil, debug: true)
         
+        var appearance = EKLongPressAppearance.init()
+        appearance.titleFont = Fonts.GilroyBold.withSize(48)
+        cons.setAppearance(appearance: appearance)
         addGestureRecognizer(cons.buildGesture())
-       
     }
     
     required init?(coder aDecoder: NSCoder) {

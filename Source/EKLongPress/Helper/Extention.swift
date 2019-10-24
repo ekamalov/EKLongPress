@@ -1,16 +1,32 @@
 //
-//  UIView+Extention.swift
-//  EKLongTouch
+//  The MIT License (MIT)
 //
-//  Created by Erik Kamalov on 5/3/19.
-//  Copyright © 2019 E K. All rights reserved.
+//  Copyright (c) 2019 Erik Kamalov <ekamalov967@gmail.com>
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 import UIKit
 
-let screen = UIScreen.main.bounds
+internal let screen = UIScreen.main.bounds
 
-extension UIView {
+internal extension UIView {
     var circlerBorder: Bool {
         get { return  layer.cornerRadius == 0 ? false : true }
         set { layer.cornerRadius = newValue ? max(bounds.size.width, bounds.size.height) / 2 : 0 }
@@ -29,20 +45,8 @@ extension UIView {
     }
 }
 
-extension CGPoint {
-    func angleToPoint(to comparisonPoint: CGPoint) -> CGFloat {
-        let origin = CGPoint.init(x: comparisonPoint.x - self.x, y: comparisonPoint.y - self.y)
-        let radians = atan2(origin.y, origin.x)
-        var bearingDegrees = radians.toDegrees
-        while bearingDegrees < 0 {
-            bearingDegrees += 360
-        }
-        return bearingDegrees
-    }
-}
-
-extension Array {
-    public subscript(safety index: Int) -> Element? {
+internal extension Array {
+    subscript(safety index: Int) -> Element? {
         guard index >= 0, index < endIndex else {
             return nil
         }
@@ -60,7 +64,7 @@ internal extension CGFloat {
 }
 
 // MARK: - Builder, you can look documentation in GitHub(https://github.com/erikkamalov/EKBuilder.git)
-public protocol Builder {
+internal protocol Builder {
     init()
 }
 extension Builder {
@@ -70,5 +74,26 @@ extension Builder {
         return copy
     }
 }
+
 extension NSObject: Builder {}
 
+internal enum Haptic {
+    case impact(style: UIImpactFeedbackGenerator.FeedbackStyle)
+    case notification(style: UINotificationFeedbackGenerator.FeedbackType)
+    case selection
+    
+    func impact(){
+        switch self {
+        case .impact(style: let style):
+            let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: style)
+            impactFeedbackgenerator.prepare()
+            impactFeedbackgenerator.impactOccurred()
+        case .notification(style: let style):
+            let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+            notificationFeedbackGenerator.notificationOccurred(style)
+        default:
+            let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+            selectionFeedbackGenerator.selectionChanged()
+        }
+    }
+}

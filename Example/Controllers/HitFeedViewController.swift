@@ -25,10 +25,17 @@ class HitFeedViewController: UIViewController {
         return cv
     }()
     
+    private lazy var statusBar = UIImageView(image: UIImage(named: "statusBar"))
+    
     var items:HitFeeds = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(collectionView)
+        self.view.addSubviews(collectionView, statusBar)
+        
+        collectionView.layout { $0.top(36).left.right.bottom.margin(0) }
+        
+        statusBar.layout { $0.left.right.top.margin(0).height(44) }
+        
         APIService.fetchHitFeeds { result in
             switch result{
             case .success(let items): self.items = items
@@ -36,15 +43,8 @@ class HitFeedViewController: UIViewController {
             }
         }
     }
- 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.layout {
-            $0.top(36).left.right.bottom.margin(0)
-        }
-    }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
 
@@ -56,7 +56,6 @@ extension HitFeedViewController: UICollectionViewDelegate,UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HitFeedCell.identifier, for: indexPath) as! HitFeedCell
         cell.viewController = self
         cell.data = items[indexPath.row]
-        cell.addGesture()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
