@@ -21,6 +21,8 @@
 		4515FE19227C188A0060B4CB /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515FE18227C188A0060B4CB /* Extention.swift */; };
 		452ADA1622BCFFBF005CAE62 /* EKItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItemView.swift */; };
 		452ADA1722BCFFBF005CAE62 /* EKItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItemView.swift */; };
+		456693AC2369C6110008E4B3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 456693AB2369C6100008E4B3 /* Cartfile.private */; };
+		456693AD2369C6110008E4B3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 456693AB2369C6100008E4B3 /* Cartfile.private */; };
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
 		45774E10225776650040062E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* Preference.swift */; };
@@ -37,7 +39,6 @@
 		45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F0AB5322B2158E003760A3 /* HitFeed.json */; };
 		45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */; };
 		45F0AB5A22B35A3A003760A3 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0AB5922B35A3A003760A3 /* AppAppearance.swift */; };
-		45FF3C95225CA584007C4F5F /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45FF3C94225CA584007C4F5F /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		4515FE15227AE1C30060B4CB /* EKLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKLayout.framework; path = Carthage/Build/iOS/EKLayout.framework; sourceTree = "<group>"; };
 		4515FE18227C188A0060B4CB /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		452ADA1522BCFFBF005CAE62 /* EKItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKItemView.swift; sourceTree = "<group>"; };
+		456693AB2369C6100008E4B3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
 		45774E0F225776650040062E /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 		45F0AB5322B2158E003760A3 /* HitFeed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HitFeed.json; sourceTree = "<group>"; };
 		45F0AB5522B22CAC003760A3 /* HitFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitFeedCell.swift; sourceTree = "<group>"; };
 		45F0AB5922B35A3A003760A3 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
-		45FF3C94225CA584007C4F5F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		45FF3C99225CC4A9007C4F5F /* EKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKKit.framework; path = Carthage/Build/iOS/EKKit.framework; sourceTree = "<group>"; };
 		45FF3D192260AAA3007C4F5F /* EKBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EKBuilder.framework; path = Carthage/Build/iOS/EKBuilder.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +176,7 @@
 		45ABAA9A224CD97600A21AB4 = {
 			isa = PBXGroup;
 			children = (
-				45FF3C94225CA584007C4F5F /* Cartfile */,
+				456693AB2369C6100008E4B3 /* Cartfile.private */,
 				45ABAAA5224CD97600A21AB4 /* Example */,
 				450AADDB22B8CC9800D50833 /* Source */,
 				45ABAAA4224CD97600A21AB4 /* Products */,
@@ -355,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456693AC2369C6110008E4B3 /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ABAAB1224CD97700A21AB4 /* LaunchScreen.storyboard in Resources */,
+				456693AD2369C6110008E4B3 /* Cartfile.private in Resources */,
 				45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */,
 				45F0AB5422B2158E003760A3 /* HitFeed.json in Resources */,
 				45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */,
 				45ABAAAE224CD97700A21AB4 /* Assets.xcassets in Resources */,
-				45FF3C95225CA584007C4F5F /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +478,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_CFLAGS = "-fembed-bitcode-marker";
-				OTHER_CPLUSPLUSFLAGS = "-fembed-bitcode";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -511,8 +513,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_CFLAGS = "-fembed-bitcode-marker";
-				OTHER_CPLUSPLUSFLAGS = "-fembed-bitcode";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
