@@ -18,6 +18,7 @@ class HitFeedHeader:UICollectionReusableView {
         $0.font = Fonts.GilroyBold.withSize(25)
     }
     lazy var logo = UIImageView(image: #imageLiteral(resourceName: "logo2"))
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews(title,logo)

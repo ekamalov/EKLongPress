@@ -63,7 +63,7 @@ extension EKContextMenuGesture {
     internal func longPressEnded() {
         if let item = contextView.activateItem, let selected = properties.selectedItem {
             item.isActive = false
-            selected(item.data)
+            selected(item.item)
         }
         dismissMenu()
     }
@@ -79,7 +79,7 @@ extension EKContextMenuGesture {
         
         Haptic.impact(style: .medium).impact()
         
-        contextView = EKContextMenuView(touchPoint: location,highlighted: view, properties: properties)
+        contextView = EKContextMenuView(touchPoint: location,highlighted: view, builder: properties)
         UIView.transition(with: self.window, duration: 0.3, options: [.transitionCrossDissolve], animations: {
             self.window.addSubview(self.contextView)
         })

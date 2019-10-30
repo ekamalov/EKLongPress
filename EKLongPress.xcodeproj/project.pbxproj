@@ -10,7 +10,7 @@
 		450AADDE22B8CC9800D50833 /* EKLongPress.h in Headers */ = {isa = PBXBuildFile; fileRef = 450AADDC22B8CC9800D50833 /* EKLongPress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		450AADE122B8CC9800D50833 /* EKLongPress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450AADDA22B8CC9800D50833 /* EKLongPress.framework */; };
 		450AADE222B8CC9800D50833 /* EKLongPress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 450AADDA22B8CC9800D50833 /* EKLongPress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		450AADE822B8CD8800D50833 /* EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKAppearance.swift */; };
+		450AADE822B8CD8800D50833 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* Preference.swift */; };
 		450AADEA22B8CD8800D50833 /* EKContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */; };
 		450AADEB22B8CD8800D50833 /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		450AADEC22B8CD8800D50833 /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
@@ -23,7 +23,7 @@
 		452ADA1722BCFFBF005CAE62 /* EKItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ADA1522BCFFBF005CAE62 /* EKItemView.swift */; };
 		45774E0C225711FA0040062E /* EKContextMenuGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0B225711FA0040062E /* EKContextMenuGesture.swift */; };
 		45774E0E225745100040062E /* EKContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0D225745100040062E /* EKContextMenuBuilder.swift */; };
-		45774E10225776650040062E /* EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* EKAppearance.swift */; };
+		45774E10225776650040062E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45774E0F225776650040062E /* Preference.swift */; };
 		45A32AFE22B3ACCE0083C4E8 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */; };
 		45A32AFF22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */; };
 		45A32B0222B3BE410083C4E8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A32B0122B3BE410083C4E8 /* APIService.swift */; };
@@ -74,7 +74,7 @@
 		452ADA1522BCFFBF005CAE62 /* EKItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKItemView.swift; sourceTree = "<group>"; };
 		45774E0B225711FA0040062E /* EKContextMenuGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuGesture.swift; sourceTree = "<group>"; };
 		45774E0D225745100040062E /* EKContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKContextMenuBuilder.swift; sourceTree = "<group>"; };
-		45774E0F225776650040062E /* EKAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKAppearance.swift; sourceTree = "<group>"; };
+		45774E0F225776650040062E /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		45A32AFC22B3ACCE0083C4E8 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		45A32AFD22B3ACCE0083C4E8 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		45A32B0122B3BE410083C4E8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		450AADE722B8CCF000D50833 /* EKLongPress */ = {
 			isa = PBXGroup;
 			children = (
-				452ADA1422BCFB08005CAE62 /* Appearance */,
+				452ADA1422BCFB08005CAE62 /* Preference */,
 				450AAE0D22BA3B9300D50833 /* Helper */,
 				452ADA1522BCFFBF005CAE62 /* EKItemView.swift */,
 				45D7B989224DDDDC00E0C6B0 /* EKContextMenuView.swift */,
@@ -147,12 +147,12 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		452ADA1422BCFB08005CAE62 /* Appearance */ = {
+		452ADA1422BCFB08005CAE62 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
-				45774E0F225776650040062E /* EKAppearance.swift */,
+				45774E0F225776650040062E /* Preference.swift */,
 			);
-			path = Appearance;
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		45A32AFB22B3AC720083C4E8 /* Fonts */ = {
@@ -402,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				450AADEA22B8CD8800D50833 /* EKContextMenuView.swift in Sources */,
-				450AADE822B8CD8800D50833 /* EKAppearance.swift in Sources */,
+				450AADE822B8CD8800D50833 /* Preference.swift in Sources */,
 				450AADEC22B8CD8800D50833 /* EKContextMenuBuilder.swift in Sources */,
 				452ADA1622BCFFBF005CAE62 /* EKItemView.swift in Sources */,
 				450AADEB22B8CD8800D50833 /* EKContextMenuGesture.swift in Sources */,
@@ -417,7 +417,7 @@
 			files = (
 				45D7B98A224DDDDC00E0C6B0 /* EKContextMenuView.swift in Sources */,
 				45F0AB5622B22CAC003760A3 /* HitFeedCell.swift in Sources */,
-				45774E10225776650040062E /* EKAppearance.swift in Sources */,
+				45774E10225776650040062E /* Preference.swift in Sources */,
 				45A32B0422B3C4B60083C4E8 /* HitFeedHeader.swift in Sources */,
 				45ABAAA9224CD97600A21AB4 /* HitFeedViewController.swift in Sources */,
 				452ADA1722BCFFBF005CAE62 /* EKItemView.swift in Sources */,
@@ -476,11 +476,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
+				OTHER_CPLUSPLUSFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -508,11 +511,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
+				OTHER_CPLUSPLUSFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuron.EKLongPress;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

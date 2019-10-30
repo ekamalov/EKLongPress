@@ -57,11 +57,11 @@ class HitFeedCell: UICollectionViewCell {
         let share:EKItem = EKItem.init(title:"Share", icon: #imageLiteral(resourceName: "share"))
         let more:EKItem = EKItem.init(title:"More", icon: #imageLiteral(resourceName: "more"))
         
-        var cons = EKContextMenu(items: [save,play,share,more], aling: .center, selectedItem: nil, debug: true)
+        var cons = EKContextMenu(items: [save,play,share,more], aling: .center, selectedItem: nil, debug: false)
         
-        var appearance = EKLongPressAppearance.init()
-        appearance.titleFont = Fonts.GilroyBold.withSize(48)
-        cons.setAppearance(appearance: appearance)
+        var preference = Preference.init()
+        preference.menu.titleFont = Fonts.GilroyBold.withSize(48)
+        cons.setAppearance(preference: preference)
         addGestureRecognizer(cons.buildGesture())
     }
     

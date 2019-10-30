@@ -30,24 +30,23 @@ public struct EKItem {
     // MARK: - Attributes
     public let title:String
     public let icon:UIImage
-    public let appearance:EKItemAppearance
+    public let preference: Preference.ContextMenu.Item
     // MARK: - Initializers
     public init(title:String, icon:UIImage) {
         self.title = title
         self.icon  = icon
-        self.appearance = EKItemAppearance()
+        self.preference = .init()
     }
     
-    public init(title:String, icon:UIImage, appearance:EKItemAppearance) {
+    public init(title: String, icon: UIImage, preference: Preference.ContextMenu.Item) {
         self.title = title
         self.icon  = icon
-        self.appearance = appearance
+        self.preference = preference
     }
 }
 
 open class EKItemView: UIView {
-    internal let data:EKItem
-
+    internal let item:EKItem
     internal var angle:CGFloat = .zero
     internal var wrapper:UIView
     private var icon:UIImageView
@@ -55,19 +54,19 @@ open class EKItemView: UIView {
     internal var isActive:Bool = false {
         willSet {
             UIView.animate(withDuration: 0.2) {
-                self.icon.tintColor          = newValue ? self.data.appearance.iconColor.active : self.data.appearance.iconColor.inactive
-                self.wrapper.backgroundColor = newValue ? self.data.appearance.backgroundColor.active : self.data.appearance.backgroundColor.inactive
+                self.icon.tintColor          = newValue ? self.item.preference.iconColor.active : self.item.preference.iconColor.inactive
+                self.wrapper.backgroundColor = newValue ? self.item.preference.backgroundColor.active : self.item.preference.backgroundColor.inactive
             }
         }
     }
   
     init(size: CGSize, item:EKItem) {
-        self.data = item
+        self.item = item
         self.icon = UIImageView(image: item.icon)
         self.wrapper = .init(frame: .init(origin: .zero, size: size))
         super.init(frame: wrapper.frame)
         
-        self.icon.frame.size = item.appearance.iconSize
+        self.icon.frame.size = item.preference.iconSize
         self.icon.center     = wrapper.center
         self.wrapper.addSubviews(self.icon)
         addSubview(wrapper)

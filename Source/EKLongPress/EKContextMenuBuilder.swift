@@ -32,14 +32,14 @@ public enum ItemsAling {
 }
 
 public struct EKContextMenuBuilder {
-    var appearance:EKLongPressAppearance
-    var aling:ItemsAling
-    var items:[EKItem]
-    var debug:Bool
+    var preference: Preference
+    var aling: ItemsAling
+    var items: [EKItem]
+    var debug: Bool
     internal var selectedItem:Selected?
-    public init(items: [EKItem], aling:ItemsAling = .center, selectedItem: ((_ item:EKItem) -> Void)? , debug:Bool = false) {
+    public init(items: [EKItem], aling:ItemsAling = .center, preference: Preference = .init(), selectedItem: ((_ item:EKItem) -> Void)? , debug:Bool = false) {
         self.items        = items
-        self.appearance   = .init()
+        self.preference   = preference
         self.aling        = aling
         self.selectedItem = selectedItem
         self.debug = debug
@@ -48,8 +48,8 @@ public struct EKContextMenuBuilder {
     public mutating func setAling(aling:ItemsAling) {
         self.aling = aling
     }
-    public mutating func setAppearance(appearance: EKLongPressAppearance) {
-        self.appearance = appearance
+    public mutating func setAppearance(preference: Preference) {
+        self.preference = preference
     }
 }
 
