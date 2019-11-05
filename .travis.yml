@@ -1,0 +1,21 @@
+language: swift
+osx_image: xcode11.1
+
+env:
+    global:
+        - PROJECT=EKLongPress.xcodeproj
+        - SCHEME=EKLongPress
+        - FRAMEWORK_NAME=EKLongPress
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+install:
+    - gem install xcpretty
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
+
+script:
+    - set -o pipefail
+    - xcodebuild clean build -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -configuration Debug | xcpretty
+    - pod lib lint --quick

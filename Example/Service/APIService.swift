@@ -9,7 +9,7 @@
 import Foundation
 
 class APIService {
-   class func fetchPopularPhoto(completion:  @escaping (Result<HitFeeds,Error>) -> Void) {
+   class func fetchHitFeeds(completion:  @escaping (Result<HitFeeds,Error>) -> Void) {
         DispatchQueue.global().async {
             if let path = Bundle.main.path(forResource: "HitFeed", ofType: "json") {
                 do {

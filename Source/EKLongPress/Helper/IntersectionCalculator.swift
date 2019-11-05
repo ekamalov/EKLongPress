@@ -1,45 +1,79 @@
 //
-//  Intersection+CGPath.swift
-//  EKLongTouch
+//  The MIT License (MIT)
 //
-//  Created by Erik Kamalov on 6/19/19.
-//  Copyright © 2019 E K. All rights reserved.
+//  Copyright (c) 2019 Erik Kamalov <ekamalov967@gmail.com>
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 import UIKit
 
-struct IntersectionCalculator{
+struct Sector {
+    var start:CGFloat
+    var end:CGFloat
+    var arcLength:CGFloat
+}
+
+struct IntersectionCalculator {
     let circleCenter:CGPoint
     let rect:CGRect
     let radius:CGFloat
+
+    private let step:CGFloat = 2.0
+    
     internal func pointCoordiante(angle: CGFloat) -> CGPoint {
         let x = radius * cos(angle.toRadians) + circleCenter.x
         let y = radius * sin(angle.toRadians) + circleCenter.y
         return CGPoint(x: x, y: y)
     }
-   
-    var sector:(start: CGFloat, end:CGFloat,arcLength:CGFloat)? {
-        var angles:[CGFloat] = []
-        var length:CGFloat = 359
-        for i in stride(from: 0, to: 359, by: 2) {
-            let coordinate = pointCoordiante(angle: CGFloat(i))
-            if coordinate.x < 0 || coordinate.x > rect.width - 0 {
-                angles.append(circleCenter.angleToPoint(to: coordinate))
-                length -= 2
-            }
-            if coordinate.y < 0 || coordinate.y > rect.height {
-                angles.append(circleCenter.angleToPoint(to: coordinate))
-                length -= 2
+    
+    var sector:Sector? {
+        var angles:[CGFloat]     = []
+        var centralAngle:CGFloat = 0
+        let isMoreMiddle       = circleCenter.x > rect.midX
+        
+        loop(startAngle: isMoreMiddle ? 0 : 180) { angle in
+            let coordinate = pointCoordiante(angle: CGFloat(angle))
+            if rect.contains(coordinate) {
+                angles.append(CGFloat(angle))
+                centralAngle += step
             }
         }
-        for (index,item) in angles.enumerated() {
-            if let previos = angles[safety: index - 1] {
-                if abs(previos - item) > 3 {
-                    return (start: previos,end: item,arcLength: length)
-                }
+        
+        guard let startAngle = isMoreMiddle ? angles.last : angles.first,
+              let endAngle   = isMoreMiddle ? angles.first : angles.last else { return nil }
+//        let arcLength = (.pi * Float(radius) * centralAngle) / 180.0
+
+        return Sector(start: startAngle, end: endAngle, arcLength: centralAngle)
+    }
+    private func loop(startAngle:Int, _ body: (Int) -> Void) {
+        var currentAngle:Int = (startAngle % 2) == 1 ? startAngle + 1 : startAngle
+        let finalAngle:Int = currentAngle
+        while true {
+            currentAngle += 2
+            if currentAngle >= 360 {
+                currentAngle = 0
+            }
+            body(currentAngle)
+            if finalAngle == currentAngle {
+                break
             }
         }
-        guard let firstAngle = angles.first, let lastAngle = angles.last else { return nil }
-        return (start: lastAngle,end: firstAngle,arcLength: length)
     }
 }
