@@ -110,7 +110,7 @@ extension EKContextMenuView {
         item.angle = CGFloat(circleSector.start) + step * CGFloat(index)
         addSubview(item)
     }
-    
+    // Fix me
     private func calcItemsContentSize() -> Sector{
         if var availableSector = IntersectionCalculator(circleCenter: touchPoint, rect: self.frame, radius: menuRadius).sector {
             print("first", availableSector)

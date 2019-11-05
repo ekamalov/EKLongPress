@@ -31,9 +31,9 @@ public struct ColotState {
 public struct Preference {
     public struct ContextMenu {
         public struct TouchPoint {
-            /// The color of the touch location view // default white
+            /// Use the color property to change the color of the touch point. By default, uses white with alpha 0.1
             public var color: UIColor = UIColor.white.withAlphaComponent(0.1)
-            /// The size of the touch location view // default 45
+            /// The size of the touch location view // default 44
             public var size: CGFloat = 44
             /// The size of the touch location view // default value 6
             public var borderWidth:CGFloat = 6
@@ -47,30 +47,30 @@ public struct Preference {
             }
             public var animation: Animation = Animation()
             
-            /// The button default and activated colors of the wrapper  view
+            /// Use the backgroundColor property to change the color of the item background. By default, uses white with alpha 0.1
             public var backgroundColor:ColotState = .init(active: .white,
                                                           inactive: .init(red: 28 / 255, green: 28 / 255, blue: 28 / 255, alpha: 1))
-            ///  The item icon default and activated colors
+            /// Use the iconColor property to change the color of the icon color. By default, uses white with alpha 0.1
             public var iconColor:ColotState = .init(active: .black, inactive: .white)
-            /// The size of the icon
+            /// Use the iconSize property to change the size of the icon. By default, user width: 24, height: 24
             public var iconSize:CGSize = .init(width: 24, height: 24)
-            /// The size of the item  // default 56
+            /// Use the size property to change the size of the item. By default, user 56
             public var size: CGFloat = 56
         }
         
-        /// The background's color of the view // default black
+        /// Use the backgroundColor property to change the color of the context menu backgroundColor. By default, uses white with alpha 0.9
         public var backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.9)
-        /// The distance between the items
+        /// Use the itemsDistance property to change the distance of the items between. By default, uses 15px
         public var itemsDistance:CGFloat = 15
-        /// The distance from item to touchPoint view
+        /// Use the itemDistFromCenter property to change the distance from of the item to touch point. By default, uses 15px
         public var itemDistFromCenter:CGFloat = 34
-        /// Font of the title Label
+        /// Use the titleFont property to change the font of the  title font. By default user "Gilroy-SemiBold"  with size 48
         public var titleFont:UIFont = .systemFont(ofSize: 48)
-        /// Color of the title text
+        /// Use the titleColor property to change the color of the title text. By default, uses white with alpha 0.9
         public var titleColor:UIColor = .white
-        /// The distance from the context menu item to the title label
+        /// Use the titleDistance property to change the distance from of the item to title text. By default, uses 64px
         public var titleDistance:CGFloat = 64
-        
+        /// Use the marginOfScreen property to change tThe indent from the edge of the screen. By default, uses 20px
         public var marginOfScreen:CGFloat = 20
         
         public var touchPoint: TouchPoint = TouchPoint()

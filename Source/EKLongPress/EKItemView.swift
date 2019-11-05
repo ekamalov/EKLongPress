@@ -38,6 +38,10 @@ public struct EKItem {
         self.preference = .init()
     }
     
+    /// Initializer
+    /// - Parameter title: Title of the item
+    /// - Parameter icon: Icon of the iten
+    /// - Parameter preference: Item appearance
     public init(title: String, icon: UIImage, preference: Preference.ContextMenu.Item) {
         self.title = title
         self.icon  = icon

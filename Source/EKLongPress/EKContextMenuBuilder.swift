@@ -37,6 +37,13 @@ public struct EKContextMenuBuilder {
     var items: [EKItem]
     var debug: Bool
     internal var selectedItem:Selected?
+    
+    /// Public initializer
+    /// - Parameter items: Items
+    /// - Parameter aling: To position relative to the ability to specify alignment. The items can be layouted relative to one or many comparable views.
+    /// - Parameter preference: Preference used to customize the appearance
+    /// - Parameter selectedItem: Close if selected item
+    /// - Parameter debug: For developer
     public init(items: [EKItem], aling:ItemsAling = .center, preference: Preference = .init(), selectedItem: ((_ item:EKItem) -> Void)? , debug:Bool = false) {
         self.items        = items
         self.preference   = preference
